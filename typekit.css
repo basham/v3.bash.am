@@ -1,0 +1,10 @@
+
+body, header h1 {
+	line-height: 1.6;
+	font-family: "droid-serif-1","droid-serif-2", Georgia, serif; }
+
+h1, h2, h3, h4, dt, cite {
+	font-family: "gesta-1","gesta-2", HelveticaNeue-Light, 'Helvetica Neue Light', 'Helvetica Neue', Helvetica, arial, sans-serif; }
+
+h3 {
+	font-size: 2em; }
