@@ -1,16 +1,14 @@
 
 html {
-	background-colorx: rgba(0, 0, 0, .8);
-	border-top: 9px solid rgba(0%, 20%, 40%, .9); }
+	border-top: 7px solid; }
 	
 body {
 	font-size: 62.5%;
 	line-height: 1.5;
 	font-family: Georgia, serif;
-	border-top: 1px solid rgba(0%, 20%, 40%, 1);  }
+	border-top: 1px solid; }
 
-h1, h2, h3, dt, cite {
-	color: rgba(0, 0, 0, .8);
+h1, h2, h3, h4, dt, cite {
 	font-weight: normal;
 	margin: 2em 0 1em;
 	font-family: HelveticaNeue-Light, 'Helvetica Neue Light', 'Helvetica Neue', Helvetica, arial, sans-serif; }
@@ -32,7 +30,7 @@ p, ol, ul, dd {
 p {
 	text-indent: 1em; }
 
-ol {
+ol, ul {
 	margin-left: 1em;
 	list-style-type: decimal; }
 
@@ -41,7 +39,7 @@ ul {
 
 hgroup {
 	display: block; }
-	
+
 hgroup aside {
 	margin: 0 4em 0 -320px;
 	float: left;
@@ -49,28 +47,26 @@ hgroup aside {
 	display: block;
 	padding: 0 40px 0 0;
 	width: 240px;
-	border-right: 1px solid rgba(0, 0, 0, .1); }
-
-article, header, footer section {
+	border-right: 1px solid; }
+	
+header, article, footer section {
 	display: block;
 	clear: both;
 	width: 640px;
 	padding: 0 0 0 320px;
 	margin: 0 auto; }
 
-article {
-	border-top: 1px solid rgba(0, 0, 0, .1); }
+article, footer section {
+	border-top: 1px solid; }
 
 figure {
 	clear: both;
 	margin: 0 2em 3em -320px;
 	float: left;
 	display: block;
-	padding: 5px;
-	background-color: rgba(0, 0, 0, .8); }
+	padding: 5px; }
 
 figure p {
-	color: #FFFFFF;
 	font-size: 1.4em;
 	margin: .5em;
 	text-indent: 0; }
@@ -81,7 +77,7 @@ figure p {
 	width: 940px;
 	padding: 0 1em;
 	margin: 0 0 3em -320px;
-	border: 1px solid rgba(0, 0, 0, .1);
+	border: 1px solid;
 	border-width: 1px 0; }
 	
 .figure-group figure {
@@ -89,28 +85,15 @@ figure p {
 	margin: 2em 1em;
 	display: inline; }
 	
-dt {
+h4, dt {
 	font-size: 1.8em;
 	margin: 1em 0 0; }
 
 dd {
 	margin: 0 0 .5em; }
 
-a:link {
-	color: rgba(0%, 40%, 80%, .9); }
-
-a:visited {
-	color: rgba(0%, 20%, 40%, .6); }
-
-a:hover {
-	color: rgba(0%, 20%, 40%, .9);
-	background-color: rgba(0%, 40%, 80%, .05); }
-
-a:active {
-	background-color: rgba(0%, 40%, 80%, .1); }
-
 abbr {
-	border-bottom: 1px dotted rgba(0, 0, 0, .8); }
+	border-bottom: 1px dotted; }
 
 blockquote {
 	margin: 2em 0; }
@@ -124,15 +107,17 @@ blockquote cite {
 	margin: -1.5em 0 .5em;
 	font-size: 1.6em;
 	font-style: normal; }
-	
-header {
-	background: transparent url(cb-logox.png) 40px 20px no-repeat; }
+
+
+/*********
+ * HEADER
+ *********/
 	
 header hgroup {
 	padding: 5em 0 0 0; }
 
 header h1 {
-	font-family: "droid-serif-1","droid-serif-2", Georgia, serif;
+	font-family: Georgia, serif;
 	float: left;
 	text-transform: lowercase;
 	margin: 0 0 0 -160px;
@@ -142,7 +127,7 @@ header hgroup section {
 	float: left;
 	padding-left: 2em;
 	margin: 2.5em 0 0 2em;
-	border-left: 1px solid rgba(0, 0, 0, .1); }
+	border-left: 1px solid; }
 
 header h2 {
 	margin: 0;
@@ -153,6 +138,7 @@ nav {
 	clear: both; }
 	
 nav ul {
+	margin-left: 0;
 	list-style-type: none; }
 
 nav li {
@@ -168,9 +154,6 @@ footer {
 
 footer p {
 	text-indent: 0; }
-	
-footer section {
-	border-top: 1px solid rgba(0, 0, 0, .1); }
 
 footer #summary, footer #colophon {
 	padding: 0;
@@ -181,13 +164,16 @@ footer aside {
 	display: block;
 	padding: 0 40px;
 	margin-bottom: 2em;
-	border-left: 1px solid rgba(0, 0, 0, .1); }
+	border-left: 1px solid; }
 
 footer aside:first-child {
 	width: 240px;
 	padding-left: 0;
 	border-width: 0; }
 
+footer #summary #about {
+	width: 230px; }
+	
 footer #colophon ul {
 	clear: both;
 	margin: 1em 0; }
@@ -201,8 +187,6 @@ footer #colophon li {
 	
 footer #colophon li:first-child {
 	padding-left: 0; }
-	
-
 
 
 #tweet aside {
@@ -216,4 +200,4 @@ footer #colophon li:first-child {
 
 .hide {
 	display: none; }
-		
+	

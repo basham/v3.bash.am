@@ -30,12 +30,16 @@
 	</nav>
 </header>
 
+
+<div id="article-wrap">
 <article>
-	
+
 	<hgroup>
 		<h1>Daybreak</h1>
 		<aside>
 			<dl>
+				<dt>Overview</dt>
+				<dd><a href="http://www.csszengarden.com/">CSS Zen Garden</a> submission</dd>
 				<dt>Role</dt>
 				<dd>CSS development</dd>
 				<dt>Team</dt>
@@ -47,10 +51,9 @@
 			</dl>
 		</aside>
 		<h2><a href="http://daybreak.bash.am">Daybreak</a> is a collaborative design experiment with <a href="http://www.tonydewan.com/">Tony Dewan</a> as a submission to the <a href="http://www.csszengarden.com/">CSS Zen Garden</a> project. Tony produced the graphics and aesthetic of the piece, while I coded the CSS and solved technical roadblocks.</h2>
-
 	</hgroup>
 
-	<section style="display:nonex">
+	<section>
 
 		<h3>Concept</h3>
 		
@@ -85,11 +88,11 @@
 
 		<p>Thus, we have three options:</p>
 	
-		<ol>
+		<ul>
 			<li>Comply to the lowest common browser, and remove any transparent PNG images, forcing us to re-brainstorm our concept;</li>
 			<li>Continue to use transparent PNGs and forego backwards compatibility; or</li>
 			<li>Produce a non-PNG version specifically for IE6.</li>
-		</ol>
+		</ul>
 	
 		<p>To improve our chances to be accepted as an official design and strengthen the piece technically, we chose option three. Therefore, any PNG images were converted to GIF.</p>
 
@@ -98,8 +101,10 @@
 		<p>As another roadblock, IE6 cannot fix elements to the bottom of the viewport naturally in CSS. The way around this was to produce a different but aesthetically similar visual anchor and affix it absolutely to the top of the page. This new image places the user "underneath" the tree, seeming as if selected branches are hanging low in the top of the user's peripheral vision.</p>
 
 	</section>
-
+<div class="clear"></div>
 </article>
+<div class="clear"></div>
+</div>
 
 <footer>
 
@@ -119,14 +124,13 @@
 	<section id="summary">
 		<aside>
 			<h3>Featured projects</h3>
-			<ul>
-				<li><a href="http://twitter.com/chrisbasham">Twitter</a></li>
-				<li><a href="http://www.facebook.com/chrisbasham">Facebook</a></li>
-				<li><a href="http://digg.com/users/chrisbasham">Digg</a></li>
-				<li><a href="http://delicious.com/cbasham">Delicious</a></li>
-			</ul>
+			<dl>
+				<dt>Waterwall</dt>
+				<dd>Interactive art installation</dd>
+				<dd><a href="#"><img src="#" width="240" height="100"/></a></dd>
+			</dl>
 		</aside>
-		<aside style="width:230px">
+		<aside id="about">
 			<h3>About Chris Basham</h3>
 			<p>Chris Basham is a <abbr title="User Experience">UX</abbr> designer and web developer pursuing a masters in <a href="http://hcid.informatics.indiana.edu"><abbr title="Human-Computer Interaction Design">HCI/d</abbr></a> at <a href="http://www.iub.edu">Indiana University Bloomington</a>. <a href="#">More&#187;</a></p>
 			<p><a href="#">Download</a> or <a href="#">view</a> his resume.</p>
@@ -174,6 +178,10 @@
 	</section>
 
 </footer>
+
+<div id="extras">
+	<div id="extra"></div>
+</div>
 
 </body>
 
