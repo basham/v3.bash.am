@@ -2,6 +2,8 @@ require 'rubygems'
 require 'sinatra'
 require 'Djerb'
 
+static = [ 'portfolio', 'resume', 'about', 'colophon' ]
+
 portfolio = [
   { :title => 'Waterwall' },
   { :title => 'Daybreak' },
@@ -37,13 +39,12 @@ helpers do
 end
 
 before do
-
+  @portfolio = portfolio
   @css = []
   @url = '/assets/css/slug/' + uri + '.css'
   if File.exists?( 'public' + @url )
     @css = [@url]
   end
-  
   @title = smartTitle
 end
 
@@ -51,9 +52,10 @@ get '/' do
 	render 'base'
 end
 
-get '/portfolio' do
-  @portfolio = portfolio
-	render 'portfolio'
+get '/:static' do
+  param = "#{params[:static]}"
+  pass if static.index(param) == nil
+  render param
 end
 
 get '/portfolio/:item' do
@@ -68,18 +70,6 @@ get '/portfolio/:item' do
   end
   pass if !passed
   render 'portfolio/' + @slug
-end
-
-get '/resume' do
-	render 'resume'
-end
-
-get '/about' do
-	render 'about'
-end
-
-get '/colophon' do
-	render 'colophon'
 end
 
 not_found do
