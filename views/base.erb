@@ -2,8 +2,13 @@
 <html>
 
 <head>
-	<title><% if @title %><%= @title %> | <% end %>Chris Basham</title>
+	<title><%= @title %></title>
 	<link rel="stylesheet" href="/assets/css/main.css" type="text/css" media="screen" />
+	<% block :css do %>
+		<% for sheet in @css %>
+	<link rel="stylesheet" href="<%= sheet %>" type="text/css" media="screen" />
+		<% end %>
+	<% end %>
 	
 	<script type="text/javascript" src="http://use.typekit.com/oim8zsd.js"></script>
 	<script type="text/javascript">try{Typekit.load();}catch(e){}</script>
@@ -58,7 +63,7 @@
 		</aside>
 		<aside id="about">
 			<h3>About Chris Basham</h3>
-			<p>Chris Basham is a <abbr title="User Experience">UX</abbr> designer and web developer pursuing a masters in <a href="http://hcid.informatics.indiana.edu"><abbr title="Human-Computer Interaction Design">HCI/d</abbr></a> at <a href="http://www.iub.edu">Indiana University Bloomington</a>. <a href="#">More&#187;</a></p>
+			<p>Chris Basham is a <abbr title="User Experience">UX</abbr> designer and web developer pursuing a masters in <a href="http://hcid.informatics.indiana.edu"><abbr title="Human-Computer Interaction Design">HCI/d</abbr></a> at <a href="http://www.iub.edu">Indiana University Bloomington</a>. <a href="/about">More&#187;</a></p>
 			<p><a href="#">Download</a> or <a href="#">view</a> his resume.</p>
 		</aside>
 		<aside>
@@ -97,7 +102,7 @@
 		</aside>
 		<aside>
 			<ul>
-				<li><a href="#">Colophon</a></li>
+				<li><a href="/colophon">Colophon</a></li>
 			</ul>
 		</aside>
 		<div class="clear"></div>

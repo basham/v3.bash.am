@@ -4,7 +4,7 @@ html {
 	
 body {
 	border-color: rgba(188, 70, 62, .8);
-	background: #0087B7 url(../i/waterwall.jpg) repeat-x 50% 160px; }
+	background: #0087B7 url(/assets/i/waterwall.jpg) repeat-x 50% 160px; }
 
 header {
 	background-color: #E6F4FF; }
