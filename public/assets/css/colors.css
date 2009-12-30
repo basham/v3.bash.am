@@ -24,8 +24,15 @@ a:hover, a:active {
 abbr {
 	border-color: rgba(0, 0, 0, .8); }
 	
-h1, h2, h3, dt, cite {
+h1, h2, h3, dt, cite, header h1 a:link, header h1 a:visited {
 	color: rgba(0, 0, 0, .8); }
+
+header h1 a {
+	text-decoration: none; }
+	
+header h1 a:hover, header h1 a:active {
+	color: rgba(0, 0, 0, 1);
+	background-color: transparent; }
 
 figure {
 	background-color: rgba(0, 0, 0, .8); }
