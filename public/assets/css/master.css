@@ -172,7 +172,7 @@ footer aside:first-child {
 	border-width: 0; }
 
 footer #summary #about {
-	width: 230px; }
+	width: 225px; }
 	
 footer #colophon ul {
 	clear: both;
@@ -200,4 +200,7 @@ footer #colophon li:first-child {
 
 .hide {
 	display: none; }
+	
+img.typekit-badge {
+	display: none !important; }
 	
