@@ -1,3 +1,4 @@
+$LOAD_PATH.unshift("~/.gem/ruby/1.8/gems") 
 require 'rubygems'
 require 'sinatra'
 
