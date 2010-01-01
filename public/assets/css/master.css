@@ -90,7 +90,13 @@ h4, dt {
 	margin: 1em 0 0; }
 
 dd {
-	margin: 0 0 .5em; }
+	margin: 0 0 .25em; }
+
+article dd {
+	margin-left: 1em; }
+
+dl ul {
+	font-size: 1em; }
 
 abbr {
 	border-bottom: 1px dotted; }
