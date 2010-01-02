@@ -3,7 +3,7 @@ require 'sinatra'
 require 'Djerb'
 
 # http://microformats.org/wiki/profile-uris
-$microformatProfiles = {
+$mfProfiles = {
   :hcalendar => 'http://microformats.org/profile/hcalendar',
   :hcard => 'http://microformats.org/profile/hcard',
   :hresume => 'http://microformats.org/profile/hresume', #Draft
@@ -11,8 +11,9 @@ $microformatProfiles = {
   :relNofollow => 'http://microformats.org/profile/rel-nofollow',
   :relTag => 'http://microformats.org/profile/rel-tag',
   :voteLinks => 'http://microformats.org/profile/vote-links',
+  :xfn => 'http://gmpg.org/xfn/11',
   :xFolk => 'http://microformats.org/profile/xfolk',
-  :xoxo => 'http://microformats.org/profile/xoxo' }
+  :xoxo => 'http://microformats.org/profile/xoxo', }
   
 static = [ 'portfolio', 'resume', 'about', 'colophon' ]
 
@@ -55,7 +56,7 @@ helpers do
       if key == 'profile':
         v = []
         value.each do | p |
-          v.push( $microformatProfiles[p] )
+          v.push( $mfProfiles[p] )
         end
         value = v
         next if value.empty?

@@ -1,16 +1,16 @@
 <!DOCTYPE html>
 <html>
 <%
-head = [:hcard]
-if defined? headProfile then
-	head.concat(headProfile)
+formats = [:hcard, :relLicense, :xfn]
+if defined? mf then
+	formats.concat(mf)
 end
 body = []
 if defined? bodyClass then
 	body.concat(bodyClass)
 end
 %>
-<head<%= tagAttr({ 'profile' => head }) %>>
+<head>
 
 	<title><%= @title %></title>
 	
@@ -22,8 +22,8 @@ end
 	<meta name="keywords" content="chris basham human computer interaction design portfolio website development indiana university bloomington hci hcid" />
 	<meta name="description" content="Chris Basham is a UX designer and web developer pursuing a masters in HCI/d at Indiana University Bloomington." />
 	
-	<link rel="profile" href="http://microformats.org/profile/hcard" />
-	
+	<% for format in formats do %><link rel="profile" href="<%= $mfProfiles[format] %>" />
+	<% end %>
 	<link rel="stylesheet" href="/assets/css/main.css" type="text/css" media="screen" />
 	<% if @css != '' then %><link rel="stylesheet" href="<%= @css %>" type="text/css" media="screen" />
 	<% end %>
