@@ -1,21 +1,36 @@
 <!DOCTYPE html>
 <html>
+<%
+head = [:hcard]
+if defined? headProfile then
+	head.concat(headProfile)
+end
+body = []
+if defined? bodyClass then
+	body.concat(bodyClass)
+end
+%>
+<head<%= tagAttr({ 'profile' => head }) %>>
 
-<head>
 	<title><%= @title %></title>
-	<link rel="stylesheet" href="/assets/css/main.css" type="text/css" media="screen" />
-	<% block :css do %>
-		<% for sheet in @css %>
-	<link rel="stylesheet" href="<%= sheet %>" type="text/css" media="screen" />
-		<% end %>
-	<% end %>
 	
+	<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+	<meta http-equiv="content-all" content="en-us" />
+	<meta name="robots" content="follow, all" />
+	<meta name="copyright" content="Copyright &copy; 2007-<%= DateTime.now.year %> Chris Basham" />
+	<meta name="author" content="Chris Basham" />
+	<meta name="keywords" content="chris basham human computer interaction design portfolio website development indiana university bloomington hci hcid" />
+	<meta name="description" content="Chris Basham is a UX designer and web developer pursuing a masters in HCI/d at Indiana University Bloomington." />
+	
+	<link rel="stylesheet" href="/assets/css/main.css" type="text/css" media="screen" />
+	<% if @css != '' then %><link rel="stylesheet" href="<%= @css %>" type="text/css" media="screen" />
+	<% end %>
 	<script type="text/javascript" src="http://use.typekit.com/oim8zsd.js"></script>
 	<script type="text/javascript">try{Typekit.load();}catch(e){}</script>
 	
 </head>
 
-<body>
+<body<%= tagAttr({ 'class' => body }) %>>
 
 <header>
 	<hgroup>
@@ -37,7 +52,7 @@
 
 <article><% block :content do %><% end %></article>
 
-<footer>
+<footer class="contact vcard">
 
 	<section id="tweet">
 		<hgroup>
@@ -63,21 +78,20 @@
 		</aside>
 		<aside id="about">
 			<h3>About Chris Basham</h3>
-			<p>Chris Basham is a <abbr title="User Experience">UX</abbr> designer and web developer pursuing a masters in <a href="http://hcid.informatics.indiana.edu"><abbr title="Human-Computer Interaction Design">HCI/d</abbr></a> at <a href="http://www.iub.edu">Indiana University Bloomington</a>. <a href="/about">More&#187;</a></p>
+			<p><span class="fn">Chris Basham</span> is a <span class="title"><abbr title="User Experience">UX</abbr> designer and web developer</span> pursuing a masters in <a href="http://hcid.informatics.indiana.edu"><abbr title="Human-Computer Interaction Design">HCI/d</abbr></a> at <a href="http://www.iub.edu">Indiana University Bloomington</a>. <a href="/about">More&#187;</a></p>
 			<p><a href="#">Download</a> or <a href="#">view</a> his resume.</p>
 		</aside>
 		<aside>
 			<h3>Contact</h3>
 			<dl>
 				<dt>Phone</dt>
-				<dd>812 459-9891</dd>
+				<dd class="tel">812 459-9891</dd>
 				<dt>Email</dt>
-				<dd><a href="mailto:chris@bash.am">chris@bash.am</a></dd>
-				<dt><span>Location</span></dt>
-				<dd><span><a href="http://maps.google.com/maps?f=q&amp;hl=en&amp;geocode=&amp;q=Indianapolis,+IN&amp;ie=UTF8&amp;z=11&amp;iwloc=addr">Bloomington, IN</a></span></dd>
+				<dd><a href="mailto:chris@bash.am" class="email">chris@bash.am</a></dd>
 			</dl>
+			<p><a href="http://feeds.technorati.com/contacts/referrer">Download vCard</a></p>
 		</aside>
-		<aside>
+		<aside id="elsewhere">
 			<h3>Elsewhere</h3>
 			<ul>
 				<li><a href="http://twitter.com/chrisbasham" rel="me">Twitter</a></li>
@@ -99,7 +113,7 @@
 		</aside>
 		<aside>
 			<ul>
-				<li><a href="http://creativecommons.org/licenses/by-nc-nd/3.0/" title="Creative Commons Attribution-Noncommercial-No Derivative Works 3.0 Unported" rel="license">Copyright &copy;</a> 2007-2009 <a href="http://bash.am">Chris Basham</a></li>
+				<li><a href="http://creativecommons.org/licenses/by-nc-nd/3.0/" title="Creative Commons Attribution-Noncommercial-No Derivative Works 3.0 Unported" rel="license">Copyright &copy;</a> 2007-<%= DateTime.now.year %> <a href="http://bash.am" class="url">Chris Basham</a></li>
 			</ul>	
 		</aside>
 		<aside>

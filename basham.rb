@@ -2,6 +2,18 @@ require 'rubygems'
 require 'sinatra'
 require 'Djerb'
 
+# http://microformats.org/wiki/profile-uris
+$microformatProfiles = {
+  :hcalendar => 'http://microformats.org/profile/hcalendar',
+  :hcard => 'http://microformats.org/profile/hcard',
+  :hresume => 'http://microformats.org/profile/hresume', #Draft
+  :relLicense => 'http://microformats.org/profile/rel-license',
+  :relNofollow => 'http://microformats.org/profile/rel-nofollow',
+  :relTag => 'http://microformats.org/profile/rel-tag',
+  :voteLinks => 'http://microformats.org/profile/vote-links',
+  :xFolk => 'http://microformats.org/profile/xfolk',
+  :xoxo => 'http://microformats.org/profile/xoxo' }
+  
 static = [ 'portfolio', 'resume', 'about', 'colophon' ]
 
 portfolio = [
@@ -35,15 +47,32 @@ helpers do
   def slug( label )
     return label.downcase.gsub(' ', '-')
   end
+
+  def tagAttr( hash )
+    s = ''
+    hash.each do |key, value|
+      next if value == nil or value.length == 0
+      if key == 'profile':
+        v = []
+        value.each do | p |
+          v.push( $microformatProfiles[p] )
+        end
+        value = v
+        next if value.empty?
+      end
+      s += ' ' + key + '="' + value.join(' ') + '"'
+    end
+    return s
+  end
   
 end
 
 before do
   @portfolio = portfolio
-  @css = []
+  @css = ''
   @url = '/assets/css/slug/' + uri + '.css'
   if File.exists?( 'public' + @url )
-    @css = [@url]
+    @css = @url
   end
   @title = smartTitle
 end
@@ -55,6 +84,7 @@ end
 get '/:static' do
   param = "#{params[:static]}"
   pass if static.index(param) == nil
+  #pass if static.include?(param)
   render param
 end
 

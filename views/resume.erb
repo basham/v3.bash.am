@@ -1,6 +1,11 @@
 
 <% extends 'views/base.erb' %>
 
+<%
+headProfile = [:hresume, :hcalendar]
+bodyClass = ['hresume']
+%>
+
 <% block :content do %>
 
 	<hgroup>
@@ -11,7 +16,7 @@
 
 			<h3>Skills</h3>
 			<dl>
-				<dt>Methods</dt>
+				<dt>Design methods</dt>
 				<dd>Affinity diagramming</dd>
 				<dd>Brainstorming</dd>
 				<dd>Card sorting</dd>
@@ -31,13 +36,15 @@
 				<dd>Project management</dd>
 				<dd>Copywriting</dd>
 				<dd>Working in small teams</dd>
-				<dt><span>Languages</span></dt>
-				<dd><span><a href="http://en.wikipedia.org/wiki/ActionScript">ActionScript 3</a>, <a href="http://en.wikipedia.org/wiki/Javascript">JavaScript</a>, <a href="http://www.php.net/"><abbr title="PHP: Hypertext Preprocessor">PHP</abbr></a>, <a href="http://www.ruby-lang.org">Ruby</a>, <a href="http://www.mysql.com/">MySQL</a>, <a href="http://en.wikipedia.org/wiki/Xhtml"><abbr title="Extensible Hypertext Markup Language">XHTML</abbr></a>, <a href="http://en.wikipedia.org/wiki/Cascading_Style_Sheets"><abbr title="Cascading Style Sheets">CSS</abbr></a></span></dd>
-				<dt><span>Technologies</span></dt>
-				<dd><span><a href="http://en.wikipedia.org/wiki/Ajax_%28programming%29"><abbr title="Asynchronous JavaScript and XML">Ajax</abbr></a>, <a href="http://en.wikipedia.org/wiki/Adobe_Flex">Flex</a>, <a href="http://en.wikipedia.org/wiki/Adobe_Air"><abbr title="Adobe Integrated Runtime">AIR</abbr></a></span></dd> <dt><span>Software</span></dt> <dd><span><a href="http://www.adobe.com/products/photoshop/">Adobe Photoshop</a>, <a href="http://www.adobe.com/products/illustrator/">Adobe Illustrator</a>, <a href="http://www.adobe.com/products/flash/">Adobe Flash</a></span>, Omnigraffle, Git, SVN</dd>
+				<dt>Languages</dt>
+				<dd><a href="http://en.wikipedia.org/wiki/ActionScript" class="skill" rel="tag">ActionScript 3</a>, <a href="http://en.wikipedia.org/wiki/Javascript" class="skill" rel="tag">JavaScript</a>, <a href="http://www.php.net/" class="skill" rel="tag"><abbr title="PHP: Hypertext Preprocessor">PHP</abbr></a>, <a href="http://www.ruby-lang.org" class="skill" rel="tag">Ruby</a>, <a href="http://www.mysql.com/" class="skill" rel="tag">MySQL</a>, <a href="http://en.wikipedia.org/wiki/Xhtml" class="skill" rel="tag"><abbr title="Extensible Hypertext Markup Language">XHTML</abbr></a>, <a href="http://en.wikipedia.org/wiki/Cascading_Style_Sheets" class="skill" rel="tag"><abbr title="Cascading Style Sheets">CSS</abbr></a></dd>
+				<dt>Technologies</dt>
+				<dd><a href="http://en.wikipedia.org/wiki/Ajax_%28programming%29" class="skill" rel="tag"><abbr title="Asynchronous JavaScript and XML">Ajax</abbr></a>, <a href="http://en.wikipedia.org/wiki/Adobe_Flex" class="skill" rel="tag">Flex</a>, <a href="http://en.wikipedia.org/wiki/Adobe_Air"><abbr title="Adobe Integrated Runtime" class="skill" rel="tag">AIR</abbr></a></dd>
+				<dt>Software</dt>
+				<dd><a href="http://www.adobe.com/products/photoshop/" class="skill" rel="tag">Adobe Photoshop</a>, <a href="http://www.adobe.com/products/illustrator/" class="skill" rel="tag">Adobe Illustrator</a>, <a href="http://www.adobe.com/products/flash/" class="skill" rel="tag">Adobe Flash</a>, Omnigraffle, Git, SVN</dd>
 			</dl>
 		</aside>
-		<h2>Seeking an internship in <abbr title="User Experience">UX</abbr> design for summer 2010.</h2>
+		<h2 class="summary">Seeking an internship in <abbr title="User Experience">UX</abbr> design for summer 2010.</h2>
 	</hgroup>
 
 	<section>
@@ -67,7 +74,7 @@
 		
 		<h3>Education</h3>
 		<dl class="education vevent">
-			<dt class="summary"><abbr title="Masters of Science">M.S.</abbr> in <a href="http://hcid.informatics.indiana.edu/">Human-Computer Interaction Design</a>, Expected <abbr class="dtend" title="2011-05-01">May 2011</span></dt>
+			<dt class="summary"><abbr title="Masters of Science">M.S.</abbr> in <a href="http://hcid.informatics.indiana.edu/">Human-Computer Interaction Design</a>, Expected <abbr class="dtend" title="2011-05-01">May 2011</abbr></dt>
 			<dd class="location"><a href="http://www.iub.edu">Indiana University</a>, <a href="http://informatics.indiana.edu">School of Informatics</a>, Bloomington, IN</dd>
 		</dl>
 		<dl class="education vevent">
@@ -81,7 +88,15 @@
 		</dl>
 
 		<h3>Other experience</h3>
-
+		<dl class="experience vevent">
+			<dt class="summary">Lifeguard, <abbr title="2006-10-01" class="dtstart">October 2006</abbr> - <abbr title="2007-12-01" class="dtend">December 2007</abbr></dt>
+			<dd class="location"><a href="http://www.iunat.iupui.edu"><abbr title="Indiana University">IU</abbr> Natatorium</a>, Indianapolis, IN</dd>
+		</dl>
+		<dl class="experience vevent">
+			<dt class="summary">Head lifeguard, <abbr title="2002-07-01" class="dtstart">July 2002</abbr> - <abbr title="2007-09-01" class="dtend">September 2007</abbr></dt>
+			<dd class="location"><a href="http://www.vanderburghgov.org/Index.aspx?page=74">Burdette Park Aquatic Center</a>, Evansville, IN</dd>
+		</dl>
+		
 	</section>
 
 <% end %>
