@@ -21,7 +21,8 @@ h2 {
 
 h3 {
 	font-size: 1.8em;
-	font-weight: bold; }
+	font-weight: bold;
+	clear: both; }
 
 p, ol, ul, dd {
 	font-size: 1.6em;
@@ -39,6 +40,14 @@ ol, ul {
 
 ul {
 	list-style-type: disc; }
+
+span.amp {
+	font-family: Georgia;
+	font-style: italic; }
+
+.col3 {
+	float: left;
+	width: 30%; }
 
 hgroup {
 	display: block; }
