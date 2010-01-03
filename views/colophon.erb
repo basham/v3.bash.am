@@ -5,37 +5,62 @@
 
 	<hgroup>
 		<h1>Colophon</h1>
-		<h2>This is how I created this site.</h2>
+		<h2>How I created this site: Abandoning XHTML 4.0 and WordPress for HTML 5 and Sinatra.</h2>
 	</hgroup>
 
 	<section>
 		
+		<h3>Process</h3>
+		<p>In July 2009, I made the first steps toward redesigning this portfolio site. Reviewing hundreds of other inspirational portfolio sites bookedmarked over the years, I distilled content by section to determine what items are most commonly referenced in, for instance, the About or Portfolio pages. Suspecting the Portfolio page would be the most important part of the redesign, I sketched dozens of ways these sites formed these pages before designing mine.</p>
+		<p>Leaving those insights to ferment over the first semester in grad school, I continued the redesign by reflecting and evaluating the (at the time) current version of the site. For this latest version, I set a few requirements:</p>
+		<ul>
+			<li><strong>HTML 5 compliant:</strong> The site would forgo XHTML 4.0 Transitional for current web standards.</li>
+			<li><strong>Microformats:</strong> The site would seek to include Microformat standards wherever possible, including hResume for the Resume; hCard for Contact; XFN for bookmarks and links.</li>
+			<li><strong>Bash.am:</strong> Rebrand under bash.am, rather than the longer, more convoluted chris.bash.am.</li>
+			<li><strong>Ruby:</strong> Stepping away from my PHP roots, I needed to explore developing from another platform.</li>
+			<li><strong>Customizability:</strong> Based on the recent trend of customizing individual pages, I needed to modify my workflow to design a layout flexible enough to meet future needs and supported by a strong, sustainable layout.</li>
+		</ul>
+		<p>Dabbling in OOP languages such as C++ and AS3, I realized PHP is simply not a language I want to purposefully spend more time developing with. The debate was between Python and Ruby, sporting such great frameworks as Django and Rails. Both languages could be used for desktop development, making transitioning to that platform easier if a project presented itself. Django's template system is absolutely fantastic, urging a strong separation of presentation and business logic, of which Rails is much less strict. However, even after purchasing two Django reference books, I chose not to pursue it. Its best use case is inherit with why it was written in 2004. Designed by news site, Django is ideal for creating dozens of micro-applications, all pulling from a central core. For this single portfolio site, I don't need such flexibility, and the server-side configurations and syncing local and external production environments would be too much work.</p>
+		<p>As my first Ruby project, Rails is simply too bloated, convoluted, and feature-rich. Coming from experience with a micro-framework like PHP's CodeIgniter, I desired something quite similar in the world of gems. Sinatra became the jewel of this project's eye.</p>
+		
 		<h3>Services &amp; software</h3>
 		<ul class="col3">
-			<li><a href="http://www.favicon.cc">favicon.cc</a><br/><span class="amp">for</span> iconography.</li>
-			<li><a href="http://microformats.org">Microformats</a><br/><span class="amp">for</span> semantics.</li>
-			<li><a href="http://h2vx.com">h2vx</a><br/><span class="amp">for</span> vCard exporting.</li>
+			<li><a href="http://matt.west.co.tt/ruby/djerb/">Djerb</a><br/><span class="amp">for</span> ruby templates.</li>
 			<li><a href="http://dreamhost.com">Dreamhost</a><br/><span class="amp">for</span> hosting.</li>
+			<li><a href="http://www.favicon.cc">favicon.cc</a><br/><span class="amp">for</span> iconography.</li>
 		</ul>
 		<ul class="col3">
 			<li><a href="http://git-scm.com">Git</a><br/><span class="amp">for</span> version control.</li>
-			<li><a href="http://macromates.com">TextMate</a><br/><span class="amp">for</span> text editing.</li>
-			<li><a href="http://typekit.com">Typekit</a><br/><span class="amp">for</span> typefaces.</li>
+			<li><a href="http://h2vx.com">h2vx</a><br/><span class="amp">for</span> vCard exporting.</li>
+			<li><a href="http://microformats.org">Microformats</a><br/><span class="amp">for</span> semantics.</li>
 		</ul>
 		<ul class="col3">
 			<li><a href="http://www.sinatrarb.com">Sinatra</a><br/><span class="amp">for</span> ruby framework.</li>
-			<li><a href="#">Shotgun gem</a><br/><span class="amp">for</span> ruby reloads.</li>
-			<li><a href="http://matt.west.co.tt/ruby/djerb/">Djerb</a><br/><span class="amp">for</span> ruby templates.</li>
+			<li><a href="http://macromates.com">TextMate</a><br/><span class="amp">for</span> text editing.</li>
+			<li><a href="http://typekit.com">Typekit</a><br/><span class="amp">for</span> <a href="http://typekit.com/colophons/oim8zsd">typefaces</a>.</li>
 		</ul>
 		<div class="clear"></div>
+		
+		<h3>Book references</h3>
+		<ul>
+			<li><a href="http://www.amazon.com/Designing-Web-Standards-Jeffrey-Zeldman/dp/0321616952"><cite>Designing with Web Standards, Third Edition</cite></a> by <a href="http://www.zeldman.com">Jeffery Zeldman</a></li>
+			<li><a href="http://www.amazon.com/Microformats-Made-Simple-Emily-Lewis/dp/0321660773"><cite>Microformats Made Simple</cite></a> by <a href="http://www.ablognotlimited.com">Emily Lewis</a></li>
+		</ul>
 		
 		<h3>Inspirational websites</h3>
 		<ul>
 			<li><a href="http://brainsideout.com" rel="friend colleague met">Dane Petersen</a></li>
-			<li><a href="http://jasonsantamaria.com" rel="muse">Jason Santa Maria</a></li>
 			<li><a href="http://informationarchitects.jp" rel="muse">Information Architects (<abbr title="Information Architects">iA</abbr>)</a></li>
+			<li><a href="http://jasonsantamaria.com" rel="muse">Jason Santa Maria</a></li>
 			<li><a href="http://sushiandrobots.com" rel="muse">Sushi &amp; Robots</a></li>
 			<li><a href="http://trentwalton.com" rel="muse">Trent Walton</a></li>
+		</ul>
+		
+		<h3>Past website versions</h3>
+		<ul>
+			<li><a href="http://bash.am">Version 3: <em>Ruby</em></a>, 2010 - present</li
+			<li><a href="http://chris.bash.am">Version 2: <em>Wordy</em></a>, 2008 - 2009</li>
+			<li><a href="http://v1.chris.bash.am">Version 1: <em>Flashy</em></a>, 2007 - 2008</li>
 		</ul>
 		
 	</section>

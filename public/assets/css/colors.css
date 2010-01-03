@@ -24,7 +24,7 @@ a:hover, a:active {
 abbr {
 	border-color: rgba(0, 0, 0, .8); }
 	
-h1, h2, h3, dt, cite, header h1 a:link, header h1 a:visited {
+h1, h2, h3, dt, header h1 a:link, header h1 a:visited {
 	color: rgba(0, 0, 0, .8); }
 
 header h1 a {
