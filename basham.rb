@@ -19,6 +19,7 @@ static = [ 'portfolio', 'resume', 'about', 'colophon' ]
 
 portfolio = [
   { :title => 'Zygomote' },
+  { :title => 'Energy Safe Kids' },
   { :title => 'Waterwall' },
   { :title => 'Ping Platform' },
   { :title => 'Daybreak' } ]
