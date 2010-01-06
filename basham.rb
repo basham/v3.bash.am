@@ -18,9 +18,10 @@ $mfProfiles = {
 static = [ 'portfolio', 'resume', 'about', 'colophon' ]
 
 portfolio = [
+  { :title => 'Zygomote' },
   { :title => 'Waterwall' },
-  { :title => 'Daybreak' },
-  { :title => 'PING Platform' } ]
+  { :title => 'Ping Platform' },
+  { :title => 'Daybreak' } ]
   
 helpers do
   
