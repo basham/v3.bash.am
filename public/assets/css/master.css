@@ -79,6 +79,7 @@ article dd {
 figure {
 	clear: both;
 	margin: 0 2em 3em -320px;
+	margin: 0 0 3em;
 	float: left;
 	display: block;
 	padding: 5px; }
