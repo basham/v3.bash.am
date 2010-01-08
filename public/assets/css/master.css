@@ -83,6 +83,7 @@ figure {
 	position: relative;
 	float: left;
 	display: block;
+	width: 640px;
 	padding: 1px;
 	border-radius: 0 0 5px 5px; }
 
