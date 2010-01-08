@@ -81,7 +81,7 @@ before do
 end
 
 get '/' do
-	render 'base'
+	render 'index'
 end
 
 get '/:static' do

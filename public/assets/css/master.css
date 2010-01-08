@@ -71,7 +71,7 @@ article, footer section {
 	border-top: 1px solid; }
 
 article {
-	margin-bottom: 40px; }
+	margin-bottom: 4em; }
 
 article dd {
     margin-left: 1em; }
@@ -229,6 +229,9 @@ footer #colophon li {
 footer #colophon li:first-child {
 	padding-left: 0; }
 
+#tweet {
+	display: block;
+	margin-top: 4em; }
 
 #tweet aside {
 	margin-top: 2em; }
