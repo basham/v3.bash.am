@@ -229,15 +229,19 @@ footer #colophon li {
 footer #colophon li:first-child {
 	padding-left: 0; }
 
-#tweet {
+.feature {
 	display: block;
 	margin-top: 4em; }
 
-#tweet aside {
+.feature aside {
 	margin-top: 2em; }
 	
-#tweet aside h2 {
+.feature aside h2 {
 	margin: 0 0 .35em; }
+
+.feature figure {
+	clear: none;
+	float: none; }
 
 .clear {
 	clear: both; }
