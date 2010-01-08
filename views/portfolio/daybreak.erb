@@ -23,25 +23,19 @@
 	<section>
 
 		<h3>Concept</h3>
+		<figure class="aside">
+			<a href="/assets/i/daybreak-01-800.jpg"><img src="/assets/i/daybreak-01-280.jpg" alt="Full page screenshot" /></a>
+			<p>As the page scrolls toward the bottom of the screen, the sun dawns revealing additional navigation.</p>
+		</figure>
 		<p>After reviewing the CSS Zen Garden's <a href="http://www.mezzoblue.com/zengarden/alldesigns/">official designs</a>, we quickly discovered a trend in the submissions: They were chosen due to <a title="Dazzling Beauty by Deny Sri Supriyono" href="http://www.csszengarden.com/?cssfile=195/195.css">design aesthetics</a> or <a title="Retro Theater by Eric Rogé" href="http://www.csszengarden.com/?cssfile=202/202.css">technical complexity</a>. For our experiment, we didn't want to force ourselves into either category, so we spent considerable time on both  strategies.</p>
 		<p>Early in the conceptual stage, we decided we wanted to tell a story as the user interacts with the design. To understand how to accomplish this, you must first understand how a story is traditionally driven: The narrative progresses at the speed of reader, i.e. the reader is in control of the story. In terms of web browsing, one of the most fundamental controls granted to a user is the ability to scroll a page. Based on that precept, we wanted to tell a story as the user scrolls the page.</p>
-		<section class="figure-group">
-			<figure>
-				<img src="assets/i/daybreak-ie6.jpg" alt="IE6 version" width="280" height="200" />
-				<p>IE6 version.</p>
-			</figure>
-			<figure>
-				<img src="assets/i/daybreak-footer.jpg" alt="IE6 version" width="280" height="200" />
-				<p>Footer screenshot.</p>
-			</figure>
-			<figure>
-				<img src="assets/i/daybreak-footer.jpg" alt="IE6 version" width="280" height="200" />
-				<p>Footer screenshot.</p>
-			</figure>
-		</section>
 		<p>Eventually, we settled on the idea of the transition from night to day. Since it is an experience everyone shares, the story is instantly relatable to the user. Given the idea, the design would require several elements to tell the story: The moon and sun to respectively establish the night and day and a sky assisting the transition between the two. In order to give a visual anchor to the user and the world in this story, the foreground must be the ground to the scrolling moon, sun, and sky. As an anchor to this world, the element should be something that is natural, strong, and enduring. A blooming tree would be the anchor to this story.</p>
 
 		<h3>Technical roadblocks</h3>
+		<figure class="aside">
+			<a href="/assets/i/daybreak-02-800.jpg"><img src="/assets/i/daybreak-02-280.jpg" alt="Alternative graphics and CSS" /></a>
+			<p>Alternative graphics and CSS were produced to gracefully degrade for Internet Explorer 6.</p>
+		</figure>
 		<p>To technically achieve a smooth transition from the spectrum of cool to warm colors while overlaying a visually complex tree element, the tree would need to be created as a 24-bit PNG image. (24-bit includes an alpha channel, rather than merely a "transparent" pixel, like 8-bit PNG and GIF.) However, as web designers, we understand the consequences of such power: It summons the need to resolve the problem for the sake of backwards compliance. For this case, Internet Explorer 6 has a notorious history of torturing designers by not naturally supporting 24-bit PNG transparency. Though the blue-block-of-death can be fixed relatively quickly with some JavaScript hackery, this will not work for the CSS Zen Garden project, since all submissions run on the same HTML template, i.e. stylesheets and images are the only tools that can be utilized.</p>
 		<p>Thus, we have three options:</p>
 		<ul>
