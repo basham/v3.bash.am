@@ -7,9 +7,6 @@ body {
 	border-color: rgba(218, 75, 59, .9);
 	background: rgb(174, 207, 233) url(/assets/i/waterwall-bg.png) repeat-x 50% -160px; }
 
-figure {
-	text-shadow: none; }
-
 a:link {
 	color: rgba(218, 75, 59, .9); }
 
