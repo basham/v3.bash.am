@@ -3,13 +3,12 @@ html {
 	border-color: rgba(218, 75, 59, .8); }
 	
 body {
+	text-shadow: rgba(100%, 100%, 100%, .8) 0 1px 0;
 	border-color: rgba(218, 75, 59, .9);
-	background: rgb(118, 171, 207) url(/assets/i/waterwall-bg.png) repeat-x 50% -160px; }
+	background: rgb(174, 207, 233) url(/assets/i/waterwall-bg.png) repeat-x 50% -160px; }
 
-header { }
-
-article h2, aside h2, h3, dt, dd, p, li, cite {
-	color: rgba(100%, 100%, 100%, .9); }
+figure {
+	text-shadow: none; }
 
 a:link {
 	color: rgba(218, 75, 59, .9); }

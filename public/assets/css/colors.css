@@ -5,7 +5,7 @@ html {
 body {
 	border-color: rgba(0%, 20%, 40%, .9); }
 
-header hgroup section, article, hgroup aside,
+header hgroup section, article, article aside,
 footer section, footer aside, .figure-group {
 	border-color: rgba(0, 0, 0, .1); }
 	
@@ -20,6 +20,15 @@ a:hover {
 
 a:hover, a:active {
 	background-color: rgba(0%, 40%, 80%, .1); }
+
+figure a:visited {
+	color: rgba(0%, 40%, 80%, .7); }
+
+figure a:hover {
+	color: rgba(0%, 40%, 80%, 1); }
+
+figure a:hover img {
+	border-color: rgba(0%, 40%, 80%, .9); }
 
 abbr {
 	border-color: rgba(0, 0, 0, .8); }

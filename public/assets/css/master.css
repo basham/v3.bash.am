@@ -4,7 +4,7 @@ html {
 	
 body {
 	font-size: 62.5%;
-	line-height: 1.5;
+	line-height: 1.6;
 	font-family: Georgia, serif;
 	border-top: 1px solid; }
 
@@ -51,8 +51,8 @@ span.amp {
 hgroup {
 	display: block; }
 
-hgroup aside {
-	margin: 0 4em 0 -320px;
+article aside {
+	margin: 0 4em 4em -320px;
 	float: left;
 	text-align: right;
 	display: block;
@@ -78,15 +78,30 @@ article dd {
 
 figure {
 	clear: both;
-	margin: 0 2em 3em -320px;
 	margin: 0 0 3em;
+	left: -1px;
+	position: relative;
 	float: left;
 	display: block;
-	padding: 5px; }
+	padding: 1px;
+	border-radius: 0 0 5px 5px; }
+
+figure img {
+	position: relative;
+	margin: -1px 0 0 -1px;
+	border: 1px solid transparent; }
+	
+figure a:hover img {
+	background-color: none;
+	border: 1px solid; }
+
+figure.aside {
+	margin: 0 4em 4em -320px;
+	width: 280px; }
 
 figure p {
 	font-size: 1.4em;
-	margin: .5em;
+	margin: .5em 1.2em;
 	text-indent: 0; }
 
 .figure-group {
