@@ -1,7 +1,9 @@
 require 'rubygems'
 require 'sinatra'
-require 'Djerb'
+require 'lib/partials'
+require 'lib/Djerb'
 
+#use Sinatra::Partials
 # http://microformats.org/wiki/profile-uris
 $mfProfiles = {
   :hcalendar => 'http://microformats.org/profile/hcalendar',
@@ -15,23 +17,24 @@ $mfProfiles = {
   :xFolk => 'http://microformats.org/profile/xfolk',
   :xoxo => 'http://microformats.org/profile/xoxo', }
   
-static = [ 'portfolio', 'resume', 'about', 'colophon' ]
+static = [ '', 'portfolio', 'resume', 'about', 'colophon' ]
 
 portfolio = [
-  { :title => 'Zygomote' },
-  { :title => 'Energy Safe Kids', :imgSlug => 'esk' },
-  { :title => 'Waterwall',
+  { :title => 'Zygomote', :slug => 'zygomote' },
+  { :title => 'Energy Safe Kids', :slug => 'energy-safe-kids', :imgSlug => 'esk' },
+  { :title => 'Waterwall', :slug => 'waterwall',
     :summary => '<a href="http://waterwall.org">Waterwall</a> is a project that explores technology\'s place in public spaces, particularly as a tool for fostering new kinds of interac&shy;tions. It\'s an interactive art installation where the body\'s motion and presence are the main input mechanism.' },
-  { :title => 'Ping Platform', :imgSlug => 'ping',
+  { :title => 'Ping Platform', :slug => 'ping-platform', :imgSlug => 'ping',
     :summary => '<a href="http://pingplatform.org">Ping</a> (Physically INteractive Gaming) is a hardware and software gaming platform intended to explore new forms of physical gestures along a tabletop surface.' },
-  { :title => 'Daybreak',
+  { :title => 'Daybreak', :slug => 'daybreak',
     :summary => '<a href="http://daybreak.bash.am">Daybreak</a> is a collaborative design experiment with <a href="http://www.tonydewan.com/">Tony Dewan</a> as a submission to the <a href="http://www.csszengarden.com/">CSS Zen Garden</a> project. Tony produced the graphics and aesthetic of the piece, while I coded the CSS and solved technical roadblocks.' } ]
   
 helpers do
+  include Sinatra::Partials
   
-  def render( template, path = 'views', ext = '.erb' )
-    template = path + '/' + template + ext
-    Djerb.run template, lambda{}
+  def renderer( template, b = lambda{} )
+    template = 'views/' + template + '.erb'
+    Djerb.run template, b
   end
   
   def title( label = '' )
@@ -81,41 +84,26 @@ end
 before do
   @portfolio = portfolio
   @randItem = portfolio[rand(portfolio.size)]
-  @css = ''
-  @url = '/assets/css/slug/' + uri + '.css'
-  if File.exists?( 'public' + @url )
-    @css = @url
-  end
+  url = '/assets/css/slug/' + uri + '.css'
+  @css = File.exists?( 'public' + url ) ? url : ''
   @title = smartTitle
 end
 
-get '/' do
-	render 'index'
-end
-
-get '/:static' do
-  param = "#{params[:static]}"
-  pass if static.index(param) == nil
-  #pass if static.include?(param)
-  render param
-end
-
-get '/portfolio/:item' do
-  passed = false
-  portfolio.each do |item|
-    @slug = slug item[:title]
-    if uri == @slug
-      passed = true
-      @title = title item[:title]
-      @summary = item[:summary]
-      break
-    end
+static.each do |path|
+  get '/' + path + '/?' do
+    renderer ( path == '' ? 'index' : path )
   end
-  pass if !passed
-  render 'portfolio/' + @slug
+end
+
+portfolio.each do |item|
+  get '/portfolio/' + item[:slug] + '/?' do
+    @title = title item[:title]
+    @summary = item[:summary]
+    renderer 'portfolio/' + item[:slug]
+  end
 end
 
 not_found do
   @title = title '404'
-	render '404'
+	renderer '404'
 end
