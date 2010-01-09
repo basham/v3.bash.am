@@ -230,6 +230,7 @@ footer #colophon li:first-child {
 	padding-left: 0; }
 
 .feature {
+	clear: both;
 	display: block;
 	margin-top: 4em; }
 

@@ -1,14 +1,17 @@
 <!DOCTYPE html>
 <html>
 <%
+
 formats = [:hcard, :relLicense, :xfn]
 if defined? mf then
 	formats.concat(mf)
 end
+
 body = []
 if defined? bodyClass then
 	body.concat(bodyClass)
 end
+
 %>
 <head>
 
@@ -64,8 +67,8 @@ end
 
 	<section id="summary">
 		<aside>
-			<h3><a href="/portfolio/daybreak">Daybreak</a></h3>
-			<figure><a href="/portfolio/daybreak"><img src="/assets/i/daybreak-preview.png" width="240" height="120" alt="Daybreak"/></a></figure>
+			<h3><a href="/portfolio/<%= slug @randItem[:title] %>"><%= @randItem[:title] %></a></h3>
+			<figure><a href="/portfolio/<%= slug @randItem[:title] %>"><img src="/assets/i/<%= imgSlug @randItem %>-pre-240.jpg" width="240" height="120" alt="<%= @randItem[:title] %>"/></a></figure>
 			<p><a href="/portfolio">More portfolio items&#187;</a></p>
 		</aside>
 		<aside id="about">
