@@ -1,11 +1,7 @@
 
-<% extends 'views/base.erb' %>
+<% extends 'views/portfolio_page.erb' %>
 
-<% block :content do %>
-
-	<hgroup>
-		<h1>Ping Platform</h1>
-		<aside>
+<% block :brief do %>
 			<dl>
 				<dt>Role</dt>
 				<dd>Ideation, Flex development</dd>
@@ -16,11 +12,9 @@
 				<dt>Visit</dt>
 				<dd><a href="http://pingplatform.org">http://pingplatform.org</a></dd>
 			</dl>
-		</aside>
-		<h2><%= @summary %></h2>
-	</hgroup>
+<% end %>
 
-	<section>
+<% block :copy do %>
 
 		<h3>Concept</h3>
 		<p>As a first attempt into exploring physical computing, colleague <a href="http://tonydewan.com" rel="friend met colleague">Tony Dewan</a> and I imagined an interactive gaming tabletop surface, with both hardware and soft&shy;ware open-sourced. The finished table would be ideally installed on the <a href="http://www.iupui.edu/"><abbr title="Indiana University-Purdue University of Indianapolis">IUPUI</abbr></a> campus, freely available to the student populous. With the <a href="http://informatics.iupui.edu/">School of Informatics</a> students in mind, Ping's software layer would be built upon the familiar Adobe Flex API, allowing student developers to freely publish games to the public platform and providing them a unique opportunity to design for gestural interfaces.</p>
@@ -41,7 +35,5 @@
 		<h3>Ping Pong game</h3>
 		<p>As a first attempt at designing a Ping multiplayer game, we created a clone of <a href="http://www.atari.com/">Atari's</a> classic <a href="http://en.wikipedia.org/wiki/Pong">Pong game</a>. The users' hand motion directly correlates to the placement of their respective paddles.</p>
 		<p>However, after much testing and software data correction, the gaming experi&shy;ence, though playable, was simply not transparent enough to continue this idea further within budgetary constraints. Provided the <abbr title="Infared">IR</abbr> line-of-sight is essentially tunnel-vision, the user would need to be extraordinarily consistent with strict hand movements to ensure long-term reliable input.</p>
-
-	</section>
 
 <% end %>

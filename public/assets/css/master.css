@@ -187,6 +187,26 @@ nav li a {
 	font-size: 1.2em; }
 	
 
+article nav {
+	float: left;
+	margin: 0 0 0 -320px; }
+	
+article nav li {
+	float: left;
+	display: block;
+	padding: 15px 40px;
+	border-left: 1px solid rgba(0, 0, 0, .1); }
+
+article nav li:first-child {
+	width: 200px;
+	border-width: 0;
+	text-align: right; }
+
+article nav li a {
+	font-size: 1em; }
+
+
+
 footer {
 	display: block; }
 

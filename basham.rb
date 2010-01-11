@@ -98,6 +98,7 @@ end
 portfolio.each do |item|
   get '/portfolio/' + item[:slug] + '/?' do
     @title = title item[:title]
+    @headline = item[:title]
     @summary = item[:summary]
     renderer 'portfolio/' + item[:slug]
   end
