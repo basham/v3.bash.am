@@ -3,32 +3,14 @@
 
 <% block :content do %>
 
-	<nav>
-		<ul>
-			<li><a href="/portfolio/ping-platform">&#171;Previous</a></li>
-			<li><a href="/portfolio/energy-safe-kids">Next&#187;</a></li>
-		</ul>
-	</nav>
+<%= partial :linear_nav, :locals => { } %>
 
 	<hgroup>
-		<h1><%= @headline %></h1>
-		<aside style="position:relative; top:-230px;" class="hide">
-			<p style="position:relative; left:125px; top:15px"><a href="/portfolio/ping-platform" style="margin-right: 80px;">&#171;Previous</a> <a href="/portfolio/energy-safe-kids">Next&#187;</a></p>
-		</aside>
-		<aside><% block :brief do %><% end %></aside>
-		<h2><%= @summary %></h2>
+		<h1><%= @item[:title] %></h1>
+		<aside><% block :brief do %><% end %>		</aside>
+		<h2><%= @item[:summary] %></h2>
 	</hgroup>
-
-	<section>
 <% block :copy do %><% end %>
-
-<nav>
-	<ul>
-		<li><a href="/portfolio/ping-platform">&#171;Previous</a></li>
-		<li><a href="/portfolio/energy-safe-kids">Next&#187;</a></li>
-	</ul>
-</nav>
-
-	</section>
+<%= partial :linear_nav, :locals => { } %>
 
 <% end %>

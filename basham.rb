@@ -98,8 +98,9 @@ end
 portfolio.each do |item|
   get '/portfolio/' + item[:slug] + '/?' do
     @title = title item[:title]
-    @headline = item[:title]
-    @summary = item[:summary]
+    @item = item
+    @prev = portfolio.prev( item )
+    @next = portfolio.next( item )
     renderer 'portfolio/' + item[:slug]
   end
 end
@@ -107,4 +108,34 @@ end
 not_found do
   @title = title '404'
 	renderer '404'
+end
+
+class Array
+  
+  def next( el )
+    return next?(el) ? self[ nextIndex(el) ] : nil
+  end
+  
+  def next?( el )
+    return nextIndex(el) != nil
+  end
+  
+  def nextIndex( el )
+    i = self.index(el)
+    return i < self.length - 1 ? i + 1 : nil
+  end
+  
+  def prev( el )
+    return prev?(el) ? self[ prevIndex(el) ] : nil
+  end
+  
+  def prev?( el )
+    return prevIndex(el) != nil
+  end
+  
+  def prevIndex( el )
+    i = self.index(el)
+    return i > 0 ? i - 1 : nil
+  end
+  
 end
