@@ -1,3 +1,14 @@
+<%
+
+require 'twitter'
+
+user = 'chrisbasham'
+status = Twitter.user(user).status
+tweet = twitterize status.text
+time = timeago Time.parse(status.created_at)
+url = 'http://twitter.com/' + user
+
+%>
 
 <% extends 'views/base.erb' %>
 	
@@ -12,15 +23,15 @@
 </article>
 
 <article>
-
+	
 	<section class="feature">
 		<aside>
 			<h2>Latest tweet</h2>
-			<p><a href="http://twitter.com/chrisbasham" rel="me">Follow me</a> on Twitter.</p>
+			<p><a href="<%= url %>" rel="me">Follow me</a> on Twitter.</p>
 		</aside>
 		<blockquote>
-			<p>Oh, Prince of tortuous, sleepless morns (@nickbasham), why release hounds (Charlie) mins prior to rooster crow, upon thy slumbering servant?</p>
-			<cite>from <a href="http://twitter.com/chrisbasham" rel="me">@chrisbasham</a> <a href="https://twitter.com/chrisbasham/status/7001626688">about 8 hours ago</a></cite>
+			<p><%= tweet %></p>
+			<cite>from <a href="<%= url %>" rel="me">@<%= user %></a> <a href="<%= url %>/status/<%= status.id %>"><%= time %></a></cite>
 		</blockquote>
 	</section>
 

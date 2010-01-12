@@ -1,6 +1,7 @@
 require 'rubygems'
 require 'sinatra'
 require 'lib/partials'
+require 'lib/TimeAgo'
 require 'lib/Djerb'
 
 #use Sinatra::Partials
@@ -31,6 +32,7 @@ portfolio = [
   
 helpers do
   include Sinatra::Partials
+  include TimeAgo
   
   def renderer( template, b = lambda{} )
     template = 'views/' + template + '.erb'
@@ -77,6 +79,13 @@ helpers do
       s += ' ' + key + '="' + value.join(' ') + '"'
     end
     return s
+  end
+  
+  def twitterize( text )
+  	# Replace URLs with a link to the URL
+  	text = text.gsub(/([a-zA-Z]+:\/\/[\w.\?\/\%\#]+)/, '<a href="\1">\1</a>')
+  	# Replace a user reference to a link to the user's profile
+  	text = text.gsub(/@([a-zA-Z0-9]+)/, '@<a href="http://twitter.com/\1">\1</a>')
   end
   
 end
