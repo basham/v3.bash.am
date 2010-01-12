@@ -99,8 +99,8 @@ portfolio.each do |item|
   get '/portfolio/' + item[:slug] + '/?' do
     @title = title item[:title]
     @item = item
-    @prev = portfolio.prev( item )
-    @next = portfolio.next( item )
+    @next = portfolio.prev( item )
+    @prev = portfolio.next( item )
     renderer 'portfolio/' + item[:slug]
   end
 end

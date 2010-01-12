@@ -1,11 +1,7 @@
 
-<% extends 'views/base.erb' %>
+<% extends 'views/portfolio_page.erb' %>
 
-<% block :content do %>
-
-	<hgroup>
-		<h1>Energy Safe Kids</h1>
-		<aside>
+<% block :brief do %>
 			<dl>
 				<dt>Role</dt>
 				<dd>Information architecture, web development &amp; design</dd>
@@ -18,14 +14,8 @@
 				<dt>Visit</dt>
 				<dd><a href="http://www.vectrenenergysafe.com">http://vectrenenergysafe.com</a></dd>
 			</dl>
-		</aside>
-		<h2><a href="http://www.vectrenenergysafe.com">Energy Safe Kids</a> is a gaming and resource hub teaching fourth graders electrical and natural gas safety.</h2>
-	</hgroup>
+<% end %>
 
-	<section>
-
-		<h3>What do I say?</h3>
-
-	</section>
-
+<% block :copy do %>
+	<h3>What do I say?</h3>
 <% end %>

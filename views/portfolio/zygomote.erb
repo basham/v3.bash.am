@@ -1,11 +1,7 @@
 
-<% extends 'views/base.erb' %>
+<% extends 'views/portfolio_page.erb' %>
 
-<% block :content do %>
-
-	<hgroup>
-		<h1>Zygomote</h1>
-		<aside>
+<% block :brief do %>
 			<dl>
 				<dt>Role</dt>
 				<dd>Research, sketching, concept generation, paper proto-typing, usability testing</dd>
@@ -16,12 +12,9 @@
 				<dt>Deliverables</dt>
 				<dd><a href="#">CHI submission</a></dd>
 			</dl>
-		</aside>
-		<h2><abbr title="Latin: 'to join in motion'">Zygomote</abbr> is an iPhone application encouraging people to walk according to three primary motivations as a first step toward long-term behavioral change and habit formation.</h2>
-	</hgroup>
+<% end %>
 
-	<section>
-
+<% block :copy do %>
 		<h3>Problem</h3>
 		
 		<p>Woots. This is coolness.</p>
@@ -33,7 +26,4 @@
 		<h3>Prototype</h3>
 		
 		<h3>Future strategies</h3>
-
-	</section>
-
 <% end %>

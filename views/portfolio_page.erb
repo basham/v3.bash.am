@@ -3,7 +3,7 @@
 
 <% block :content do %>
 
-<%= partial :linear_nav, :locals => { } %>
+<%= partial :linear_nav %>
 
 	<hgroup>
 		<h1><%= @item[:title] %></h1>
@@ -11,6 +11,6 @@
 		<h2><%= @item[:summary] %></h2>
 	</hgroup>
 <% block :copy do %><% end %>
-<%= partial :linear_nav, :locals => { } %>
+<%= partial :linear_nav %>
 
 <% end %>
