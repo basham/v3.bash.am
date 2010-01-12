@@ -6,7 +6,7 @@ require 'rubygems'
 require 'sinatra'
 
 set :environment, :production
-disable :run
+set :run, false
 
 require 'basham.rb'
-run Sinatra::Application
+#run Sinatra::Application
