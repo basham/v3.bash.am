@@ -5,8 +5,8 @@ $LOAD_PATH.unshift('~/.gem/ruby/1.8/gems/sinatra-0.9.4/lib')
 require 'rubygems'
 require 'sinatra'
 
-set :env, :production
+set :environment, :production
 disable :run
 
 require 'basham.rb'
-run Sinatra.application
+run Sinatra::Application
