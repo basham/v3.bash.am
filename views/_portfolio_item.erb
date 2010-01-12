@@ -1,0 +1,10 @@
+	<section class="feature">
+		<aside>
+			<h2><a href="/portfolio/<%= slug item[:title] %>"><%= item[:title] %></a></h2>
+			<p><%= item[:summary] %></p>
+			<p><a href="/portfolio/<%= slug item[:title] %>">More&#187;</a></p>
+		</aside>
+		<figure>
+			<a href="/portfolio/<%= slug item[:title] %>"><img src="/assets/i/<%= imgSlug item %>-pre-640.jpg" width="640" height="320" alt="<%= item[:title] %>"/></a>
+		</figure>
+	</section>
