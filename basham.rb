@@ -1,10 +1,10 @@
 require 'rubygems'
 require 'sinatra'
+require 'lib/Array'
 require 'lib/partials'
 require 'lib/TimeAgo'
 require 'lib/Djerb'
 
-#use Sinatra::Partials
 # http://microformats.org/wiki/profile-uris
 $mfProfiles = {
   :hcalendar => 'http://microformats.org/profile/hcalendar',
@@ -31,6 +31,7 @@ portfolio = [
     :summary => '<a href="http://daybreak.bash.am">Daybreak</a> is a collaborative design experiment with <a href="http://www.tonydewan.com/">Tony Dewan</a> as a submission to the <a href="http://www.csszengarden.com/">CSS Zen Garden</a> project. Tony produced the graphics and aesthetic of the piece, while I coded the CSS and solved technical roadblocks.' } ]
   
 helpers do
+  
   include Sinatra::Partials
   include TimeAgo
   
@@ -118,34 +119,4 @@ end
 not_found do
   @title = title '404'
 	renderer '404'
-end
-
-class Array
-  
-  def next( el )
-    return next?(el) ? self[ nextIndex(el) ] : nil
-  end
-  
-  def next?( el )
-    return nextIndex(el) != nil
-  end
-  
-  def nextIndex( el )
-    i = self.index(el)
-    return i < self.length - 1 ? i + 1 : nil
-  end
-  
-  def prev( el )
-    return prev?(el) ? self[ prevIndex(el) ] : nil
-  end
-  
-  def prev?( el )
-    return prevIndex(el) != nil
-  end
-  
-  def prevIndex( el )
-    i = self.index(el)
-    return i > 0 ? i - 1 : nil
-  end
-  
 end
