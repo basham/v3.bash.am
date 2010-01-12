@@ -37,4 +37,9 @@ module TimeAgo
         "#{(minutes / 1440).round} days"
     end
   end
+  
+  def pluralize( value, singular, plural = '' )
+    plural = plural == '' ? singular + 's' : plural
+    return value == 1 ? singular : plural
+  end
 end
