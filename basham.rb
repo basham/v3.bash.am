@@ -84,6 +84,7 @@ end
 before do
   @portfolio = portfolio
   @randItem = portfolio[rand(portfolio.size)]
+  @featuredItem = portfolio.first
   url = '/assets/css/slug/' + uri + '.css'
   @css = File.exists?( 'public' + url ) ? url : ''
   @title = smartTitle
