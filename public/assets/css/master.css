@@ -145,6 +145,12 @@ blockquote cite {
 	margin: -1.5em 0 .5em;
 	font-size: 1.6em;
 	font-style: normal; }
+	
+.hresume .description {
+	margin-left: 2em; }
+
+.hresume .description ul {
+	margin-left: 0em; }
 
 
 /*********
