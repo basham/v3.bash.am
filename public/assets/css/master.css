@@ -94,7 +94,7 @@ figure img {
 	border: 1px solid transparent; }
 	
 figure a:hover img {
-	background-color: none;
+	background-color: transparent;
 	border: 1px solid; }
 
 figure.aside {
@@ -202,7 +202,7 @@ article nav li {
 	float: left;
 	display: block;
 	padding: 15px 40px;
-	border-left: 1px solid rgba(0, 0, 0, .1); }
+	border-left: 1px solid; }
 
 article nav li:first-child {
 	width: 200px;
