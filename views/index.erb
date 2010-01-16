@@ -14,9 +14,7 @@ url = 'http://twitter.com/' + user
 	
 <% block :content do %>
 
-	<hgroup>
-		<h1>Featured project</h1>
-	</hgroup>
+	<h1>Featured project</h1>
 
 <%= partial :portfolio_item, :locals => { :item => @featuredItem } %>
 	

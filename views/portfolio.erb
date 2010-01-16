@@ -3,13 +3,9 @@
 
 <% block :content do %>
 
-	<hgroup>
-		<h1>Portfolio</h1>
-		<h2>Case studies of various <abbr title="User Experience">UX</abbr> and web development projects.</h2>
-	</hgroup>
-
+	<h1>Portfolio</h1>
+	<h2>Case studies of various <abbr title="User Experience">UX</abbr> and web development projects.</h2>
 <% @portfolio.each do |item| %>	
 <%= partial :portfolio_item, :locals => { :item => item } %>
 <% end %>
-
 <% end %>
