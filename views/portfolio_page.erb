@@ -5,11 +5,11 @@
 
 <%= partial :linear_nav %>
 
-	<hgroup>
-		<h1><%= @item[:title] %></h1>
-		<aside><% block :brief do %><% end %>		</aside>
-		<h2><%= @item[:summary] %></h2>
-	</hgroup>
+	<h1><%= @item[:title] %></h1>
+	
+	<aside><% block :brief do %><% end %>	</aside>
+	
+	<h2><%= @item[:summary] %></h2>
 <% block :copy do %><% end %>
 <%= partial :linear_nav %>
 
