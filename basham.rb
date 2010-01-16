@@ -67,6 +67,10 @@ helpers do
     return slug portfolioItem[:title]
   end
 
+  def cssURI( slug )
+    return '/assets/css/slug/' + slug + '.css'
+  end
+
   def tagAttr( hash )
     s = ''
     hash.each do |key, value|
@@ -99,7 +103,7 @@ before do
   @portfolio = portfolio
   @randItem = portfolio[rand(portfolio.size)]
   @featuredItem = portfolio.first
-  url = '/assets/css/slug/' + uri + '.css'
+  url = cssURI uri
   @css = File.exists?( 'public' + url ) ? url : ''
   @title = smartTitle
 end
@@ -121,6 +125,7 @@ portfolio.each do |item|
 end
 
 not_found do
+  @css = cssURI '404'
   @title = title '404'
 	renderer '404'
 end
