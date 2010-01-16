@@ -18,7 +18,7 @@ end
 	<title><%= @title %></title>
 	
 	<meta http-equiv="content-type" content="text/html; charset=utf-8" />
-	<meta http-equiv="content-all" content="en-us" />
+	<meta http-equiv="content-language" content="en-us" />
 	<meta name="robots" content="follow, all" />
 	<meta name="copyright" content="Copyright &copy; 2007-<%= DateTime.now.year %> Chris Basham" />
 	<meta name="author" content="Chris Basham" />
@@ -44,13 +44,13 @@ end
 <body<%= tagAttr({ 'class' => body }) %>>
 
 <header>
-	<hgroup>
+	<section>
 		<h1><a href="/">Chris <strong>Basham</strong></a></h1>
-		<section>
+		<hgroup>
 			<h2>User experience designer in training.</h2>
 			<h2>Web developer by trade.</h2>
-		</section>
-	</hgroup>
+		</hgroup>
+	</section>
 	<nav>
 		<ul>
 			<li><a href="/">Home</a></li>

@@ -157,7 +157,8 @@ blockquote cite {
  * HEADER
  *********/
 	
-header hgroup {
+header section {
+	display: block;
 	padding: 5em 0 0 0; }
 
 header h1 {
@@ -167,7 +168,7 @@ header h1 {
 	margin: 0 0 0 -148px;
 	font-size: 6em; }
 
-header hgroup section {
+header section hgroup {
 	float: left;
 	padding-left: 2em;
 	margin: 2.5em 0 0 2em;

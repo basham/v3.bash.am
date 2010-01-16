@@ -5,7 +5,7 @@ html {
 body {
 	border-color: rgba(0%, 20%, 40%, .9); }
 
-header hgroup section, article, article aside,
+header section hgroup, article, article aside,
 footer section, footer aside, .figure-group {
 	border-color: rgba(0, 0, 0, .1); }
 	
