@@ -90,7 +90,7 @@ helpers do
   
   def twitterize( text )
   	# Replace URLs with a link to the URL
-  	text = text.gsub(/([a-zA-Z]+:\/\/[\w.\?\/\%\#]+)/, '<a href="\1">\1</a>')
+  	text = text.gsub(/([a-zA-Z]+:\/\/[\w.\?\/\%\#=]+)/, '<a href="\1">\1</a>')
   	# Replace a user reference to a link to the user's profile
   	text = text.gsub(/@([a-zA-Z0-9]+)/, '@<a href="http://twitter.com/\1">\1</a>')
   	# Replace a hash tag reference to a search link
