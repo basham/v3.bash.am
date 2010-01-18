@@ -24,7 +24,7 @@ portfolio = [
   { :title => 'Zygomote', :slug => 'zygomote',
     :summary => 'Zygomote is an iPhone application encouraging users to walk more regularly, as a submission to the <a href="http://www.chi2010.org/">CHI 2010</a> <a href="http://www.chi2010.org/authors/cfp-sdc.html">Student Design Competition</a>.' },
   { :title => 'Energy Safe Kids', :slug => 'energy-safe-kids', :imgSlug => 'esk',
-    :summary => '<a href="http://www.vectrenenergysafe.com">Energy Safe Kids</a> is a micro-site sponsored by <a href="http://www.vectren.com">Vectren Corp</a> to promote and educate electricity and natural gas safety to elementary students.' },
+    :summary => '<a href="http://www.vectrenenergysafe.com">Energy Safe Kids</a> is a micro-site sponsored by <a href="http://www.vectren.com">Vectren Corp</a> to promote and educate natural gas and electricity safety to elementary students.' },
   { :title => 'Waterwall', :slug => 'waterwall',
     :summary => '<a href="http://waterwall.org">Waterwall</a> is a project that explores technology\'s place in public spaces, particularly as a tool for fostering new kinds of interac&shy;tions. It\'s an interactive art installation where the body\'s motion and presence are the main input mechanism.' },
   { :title => 'Ping Platform', :slug => 'ping-platform', :imgSlug => 'ping',
