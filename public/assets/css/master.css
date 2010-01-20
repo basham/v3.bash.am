@@ -86,6 +86,9 @@ figure {
 	width: 640px;
 	padding: 1px;
 	text-shadow: none;
+	-webkit-border-bottom-left-radius: 5px;
+	-webkit-border-bottom-right-radius: 5px;
+	-moz-border-radius: 0 0 5px 5px;
 	border-radius: 0 0 5px 5px; }
 
 figure img {
@@ -109,16 +112,22 @@ figure p {
 .figure-group {
 	float: left;
 	display: block;
-	width: 940px;
-	padding: 0 1em;
+	width: 960px;
 	margin: 0 0 3em -320px;
 	border: 1px solid;
 	border-width: 1px 0; }
 	
 .figure-group figure {
 	clear: none;
-	margin: 2em 1em;
-	display: inline; }
+	margin: 2em 0 2em 2em;
+	display: inline;
+	width: 220px; }
+
+.figure-group figure:first-child {
+	margin-left: .5em; }
+
+.figure-group.six figure {
+	width: 140px; }
 
 dl ul {
 	font-size: 1em; }

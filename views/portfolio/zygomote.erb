@@ -1,7 +1,45 @@
 
-<% extends 'views/portfolio_page.erb' %>
+<% extends 'views/base.erb' %>
 
-<% block :brief do %>
+<% block :content do %>
+
+<%= partial :linear_nav %>
+
+	<script type="text/javascript">
+		$(document).ready(function() {
+			$('.gallery .thumb a').click(function() {
+				var index = $(this).attr('href').slice(1) - 1;
+				var gallery = $(this).closest('.gallery');
+				gallery.find('.active').removeClass('active');
+				gallery.find('.img li:eq(' + index + ')').addClass('active');
+				$(this).addClass('active');
+				return false;
+			});
+		});
+	</script>
+
+	<h1><%= @item[:title] %></h1>
+	
+	<section class="gallery">
+		<ul class="img">
+			<li class="active"><img src="/assets/i/zygomote-mockup-01-280.jpg" alt="Zygomote Home"/></li>
+			<li><img src="/assets/i/zygomote-mockup-02-280.jpg" alt="Zygomote Home clouds merging"/></li>
+			<li><img src="/assets/i/zygomote-mockup-03-280.jpg" alt="Zygomote Home clouds merged"/></li>
+			<li><img src="/assets/i/zygomote-mockup-04-280.jpg" alt="Zygomote Causes"/></li>
+			<li><img src="/assets/i/zygomote-mockup-05-280.jpg" alt="Zygomote Awards"/></li>
+			<li><img src="/assets/i/zygomote-mockup-06-280.jpg" alt="Zygomote Profile"/></li>
+		</ul>
+		<ul class="thumb">
+			<li><a href="#1" class="active"><img src="/assets/i/zygomote-mockup-01-60.jpg" alt="Zygomote Home"/></a></li>
+			<li><a href="#2"><img src="/assets/i/zygomote-mockup-02-60.jpg" alt="Zygomote Home clouds merging"/></a></li>
+			<li><a href="#3"><img src="/assets/i/zygomote-mockup-03-60.jpg" alt="Zygomote Home clouds merged"/></a></li>
+			<li><a href="#4"><img src="/assets/i/zygomote-mockup-04-60.jpg" alt="Zygomote Causes"/></a></li>
+			<li><a href="#5"><img src="/assets/i/zygomote-mockup-05-60.jpg" alt="Zygomote Awards"/></a></li>
+			<li><a href="#6"><img src="/assets/i/zygomote-mockup-06-60.jpg" alt="Zygomote Profile"/></a></li>
+		</ul>
+	</section>
+	
+	<aside>
 		<dl>
 			<dt>Role</dt>
 			<dd>Research, sketching, ideation, paper prototyping, usability testing</dd>
@@ -12,15 +50,39 @@
 			<dt>Deliverables</dt>
 			<dd><a href="/assets/pdf/zygomote_chi-paper.pdf">CHI 2010 paper submission</a></dd>
 			<dd><a href="/assets/pdf/zygomote_class-presentation.pdf"><abbr title="Human-Computer Interaction Design">HCI/d</abbr> class presentation</a></dd>
-		</dl>
-<% end %>
+		</dl>	
+	</aside>
+	
+	<h2><%= @item[:summary] %></h2>
 
-<% block :copy do %>
 	<h3>Process</h3>
-	<p>Tasked with "encouraging people to take a walk" for the <a href="http://www.chi2010.org/">CHI 2010</a> <a href="http://www.chi2010.org/authors/cfp-sdc.html">Student Design Competition</a>, our team initially approached the problem by operationalizing the term <em>walking</em>. To better understand the problem space according to our selected target audience of young-adult Americans, we organized a focus group; but due to a lack of participation, we instead conducted one-on-one interviews the same night.</p>
+	<p>Tasked with "encouraging people to take a walk" for the <a href="http://www.chi2010.org/">CHI 2010</a> <a href="http://www.chi2010.org/authors/cfp-sdc.html">Student Design Competition</a>, our team initially approached the problem by operation&shy;alizing the term <em>walking</em>. To better understand the problem space according to our selected target audience of young-adult Americans, we organized a focus group; but due to a lack of participation, we instead conducted one-on-one interviews the same night.</p>
 	<p>Those results, coupled with non-participatory <a href="http://en.wikipedia.org/wiki/Ethnography">ethnography</a> studies on the <a href="http://www.iub.edu/"><abbr title="Indiana University Bloomington">IUB</abbr></a> campus and secondary research, provided a wide landscape to triangulate the core problem. Guided by <a href="http://en.wikipedia.org/wiki/Affinity_diagram">affinity diagrams</a>, we focused on community influences as a primary way to encourage walking while instilling long-term behavioral change. With the assistance of two personas, several <a href="http://www.designersaccord.org/initiatives/">Lense exercises</a>, a plethora of Golden Questions, and plenty of peer opinions, dozens of concepts were generated, categorized, and subsequently narrowed to a single, final concept &mdash; Zygomote.</p>
 
+	<section class="figure-group six">
+		<figure>
+			<a href="/assets/i/zygomote-01-800.jpg"><img src="/assets/i/zygomote-01-140.jpg" alt="A participant interacts with Waterwall" width="140" /></a>
+		</figure>
+		<figure>
+			<a href="/assets/i/zygomote-02-800.jpg"><img src="/assets/i/zygomote-02-140.jpg" alt="A participant interacts with Waterwall" width="140" /></a>
+		</figure>
+		<figure>
+			<a href="/assets/i/zygomote-03-800.jpg"><img src="/assets/i/zygomote-03-140.jpg" alt="A participant interacts with Waterwall" width="140" /></a>
+		</figure>
+		<figure>
+			<a href="/assets/i/zygomote-04-800.jpg"><img src="/assets/i/zygomote-04-140.jpg" alt="A participant interacts with Waterwall" width="140" /></a>
+		</figure>
+		<figure>
+			<a href="/assets/i/zygomote-05-800.jpg"><img src="/assets/i/zygomote-05-140.jpg" alt="A participant interacts with Waterwall" width="140" /></a>
+		</figure>
+		<figure>
+			<a href="/assets/i/zygomote-06-800.jpg"><img src="/assets/i/zygomote-06-140.jpg" alt="A participant interacts with Waterwall" width="140" /></a>
+		</figure>
+	</section>
+	
 	<h3>Concept</h3>
 	<p>The name Zygomote is a composite of two Latin bases, <em>zygo</em> meaning "to join" and <em>mote</em> meaning "motion." Essentially, the iPhone app Zygomote encourages people to <em>join in motion</em> and walk together, according to three primary motivations: social bonding, social accountability, and small accomplishments. A 2D visualization illustrates the time the user spends walking with friends; the user's walking activity translates to measurable contributions to charities and causes; and the user frequently earns virtual awards for small feats. A combination of these three features will encourage individuals to walk more regularly.</p>
 	<p>Scenario-based user evaluations with paper prototypes uncovered some usability problems, yet confirmed it is both easy to learn and use. One user's comment that Zygomote will "surely encourage me to walk more with friends" indicates our design could be very successful in real-world application. Further strategies suggest how to implement, refine, and sustain Zygomote.</p>
+<%= partial :linear_nav %>
+
 <% end %>

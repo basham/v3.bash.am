@@ -1,0 +1,36 @@
+
+.gallery {
+	display: block;
+	float: right;
+	margin: -210px 0 0 40px; }
+
+.gallery ul {
+	margin: 0;
+	list-style-type: none; }
+
+.gallery ul.img li {
+	display: none; }
+
+.gallery ul.img li.active {
+	display: block; }
+
+.gallery ul.thumb {
+	width: 210px;
+	margin: 1em auto; }
+
+.gallery ul.thumb li {
+	display: block;
+	float: left;
+	margin: 0 5px 5px 5px; }
+
+.gallery a {
+	opacity: .6; }
+
+.gallery a:hover {
+	opacity: 1;
+	background-color: transparent; }
+
+.gallery a.active {
+	opacity: 1;
+	position: relative;
+	top: -5px; }
