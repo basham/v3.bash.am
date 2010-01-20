@@ -15,25 +15,23 @@
 <% end %>
 
 <% block :copy do %>
-
-		<h3>Concept</h3>
-		<p>As a first attempt into exploring physical computing, colleague <a href="http://tonydewan.com" rel="friend met colleague">Tony Dewan</a> and I imagined an interactive gaming tabletop surface, with both hardware and soft&shy;ware open-sourced. The finished table would be ideally installed on the <a href="http://www.iupui.edu/"><abbr title="Indiana University-Purdue University of Indianapolis">IUPUI</abbr></a> campus, freely available to the student populous. With the <a href="http://informatics.iupui.edu/">School of Informatics</a> students in mind, Ping's software layer would be built upon the familiar Adobe Flex API, allowing student developers to freely publish games to the public platform and providing them a unique opportunity to design for gestural interfaces.</p>
-		
-		<h3>Gestural input</h3>
-		<figure class="aside">
-			<a href="/assets/i/ping-01-800.jpg"><img src="/assets/i/ping-01-280.jpg" alt="Ping running the game Pong" /></a>
-			<p><a href="http://informatics.iupui.edu/people/baker" rel="friend met colleague">Dr. Baker</a> previews an alpha version of Ping running the game Pong.</p>
-		</figure>
-		<p>Not wanting to merely recreate a multitouch surface, we explored a finer subset of such gestures and sought to understand if constraining the user to a single axis would be a viable alternative to 2-dimensional input in limited use-cases. Given a single axis and (optionally) two hands, we envisioned how the user would input key commands, select objects, and navigate menu items.</p>
-		<p>Each of the table's four sides provides independent controls to the system, allowing up to four simultaneous users. All gestures is derivative of the user's hand placement relative to the edge of the table. By gesturing with two hands, the user introduces a length variable (i.e. the distance between the hands) as an additional input, providing an opportunity for relatively complex gestural interactions.</p>
-		<figure class="aside">
-			<a href="/assets/i/ping-02-800.jpg"><img src="/assets/i/ping-02-280.jpg" alt="A participant interacts with Waterwall" /></a>
-			<p>A sensor block with two mounted <a href="http://www.trossenrobotics.com/sharp-ir-distance-sensor-gp2y0a02yk.aspx">Sharp IR distance sensors</a>.</p>
-		</figure>
-		<p>To acquire such distance input, the most economical and reliable method is placing <a href="http://en.wikipedia.org/wiki/Infrared">infrared</a> distance sensors along the corners of the table, facing inward toward the middle of their respective sides. Each side, monitored by sensors on its two corners, interprets two hands (or objects) placed along the side as an input. By relying on <a href="http://www.phidgets.com/">Phidgets</a> as a middle-layer between the sensors and Flex, Ping receives and adapts the data, converting it to actionable ActionScript 3 events to be interpreted by any software layer.</p>
-		
-		<h3>Ping Pong game</h3>
-		<p>As a first attempt at designing a Ping multiplayer game, we created a clone of <a href="http://www.atari.com/">Atari's</a> classic <a href="http://en.wikipedia.org/wiki/Pong">Pong game</a>. The users' hand motion directly correlates to the placement of their respective paddles.</p>
-		<p>However, after much testing and software data correction, the gaming experi&shy;ence, though playable, was simply not transparent enough to continue this idea further within budgetary constraints. Provided the <abbr title="Infared">IR</abbr> line-of-sight is essentially tunnel-vision, the user would need to be extraordinarily consistent with strict hand movements to ensure long-term reliable input.</p>
-
+	<h3>Concept</h3>
+	<p>As a first attempt into exploring physical computing, colleague <a href="http://tonydewan.com" rel="friend met colleague">Tony Dewan</a> and I imagined an interactive gaming tabletop surface, with both hardware and soft&shy;ware open-sourced. The finished table would be ideally installed on the <a href="http://www.iupui.edu/"><abbr title="Indiana University-Purdue University of Indianapolis">IUPUI</abbr></a> campus, freely available to the student populous. With the <a href="http://informatics.iupui.edu/">School of Informatics</a> students in mind, Ping's software layer would be built upon the familiar Adobe Flex API, allowing student developers to freely publish games to the public platform and providing them a unique opportunity to design for gestural interfaces.</p>
+	
+	<h3>Gestural input</h3>
+	<figure class="aside">
+		<a href="/assets/i/ping-01-800.jpg"><img src="/assets/i/ping-01-280.jpg" alt="Ping running the game Pong" /></a>
+		<p><a href="http://informatics.iupui.edu/people/baker" rel="friend met colleague">Dr. Baker</a> previews an alpha version of Ping running the game Pong.</p>
+	</figure>
+	<p>Not wanting to merely recreate a multitouch surface, we explored a finer subset of such gestures and sought to understand if constraining the user to a single axis would be a viable alternative to 2-dimensional input in limited use-cases. Given a single axis and (optionally) two hands, we envisioned how the user would input key commands, select objects, and navigate menu items.</p>
+	<p>Each of the table's four sides provides independent controls to the system, allowing up to four simultaneous users. All gestures is derivative of the user's hand placement relative to the edge of the table. By gesturing with two hands, the user introduces a length variable (i.e. the distance between the hands) as an additional input, providing an opportunity for relatively complex gestural interactions.</p>
+	<figure class="aside">
+		<a href="/assets/i/ping-02-800.jpg"><img src="/assets/i/ping-02-280.jpg" alt="A participant interacts with Waterwall" /></a>
+		<p>A sensor block with two mounted <a href="http://www.trossenrobotics.com/sharp-ir-distance-sensor-gp2y0a02yk.aspx">Sharp IR distance sensors</a>.</p>
+	</figure>
+	<p>To acquire such distance input, the most economical and reliable method is placing <a href="http://en.wikipedia.org/wiki/Infrared">infrared</a> distance sensors along the corners of the table, facing inward toward the middle of their respective sides. Each side, monitored by sensors on its two corners, interprets two hands (or objects) placed along the side as an input. By relying on <a href="http://www.phidgets.com/">Phidgets</a> as a middle-layer between the sensors and Flex, Ping receives and adapts the data, converting it to actionable ActionScript 3 events to be interpreted by any software layer.</p>
+	
+	<h3>Ping Pong game</h3>
+	<p>As a first attempt at designing a Ping multiplayer game, we created a clone of <a href="http://www.atari.com/">Atari's</a> classic <a href="http://en.wikipedia.org/wiki/Pong">Pong game</a>. The users' hand motion directly correlates to the placement of their respective paddles.</p>
+	<p>However, after much testing and software data correction, the gaming experi&shy;ence, though playable, was simply not transparent enough to continue this idea further within budgetary constraints. Provided the <abbr title="Infared">IR</abbr> line-of-sight is essentially tunnel-vision, the user would need to be extraordinarily consistent with strict hand movements to ensure long-term reliable input.</p>
 <% end %>

@@ -6,7 +6,7 @@
 <%= partial :linear_nav %>
 
 	<h1><%= @item[:title] %></h1>
-	
+	<% block :immediate do %><% end %>
 	<aside><% block :brief do %><% end %>	</aside>
 	
 	<h2><%= @item[:summary] %></h2>
