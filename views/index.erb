@@ -1,5 +1,5 @@
 <%
-=begin
+
 require 'twitter'
 
 user = 'chrisbasham'
@@ -7,7 +7,7 @@ status = Twitter.user(user).status
 tweet = twitterize status.text
 time = timeago Time.parse(status.created_at)
 url = 'http://twitter.com/' + user
-=end
+
 %>
 
 <% extends 'views/base.erb' %>
@@ -19,7 +19,7 @@ url = 'http://twitter.com/' + user
 <%= partial :portfolio_item, :locals => { :item => @featuredItem } %>
 	
 </article>
-<% if false %>
+
 <article>
 	
 	<section class="feature">
@@ -32,5 +32,5 @@ url = 'http://twitter.com/' + user
 			<cite>by <a href="<%= url %>" rel="me">@<%= user %></a> <a href="<%= url %>/status/<%= status.id %>"><%= time %></a></cite>
 		</blockquote>
 	</section>
-<% end %>
+
 <% end %>
