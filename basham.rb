@@ -92,7 +92,7 @@ helpers do
   	# Replace URLs with a link to the URL
   	text = text.gsub(/([a-zA-Z]+:\/\/[\w.\?\/\%\#=]+)/, '<a href="\1">\1</a>')
   	# Replace a user reference to a link to the user's profile
-  	text = text.gsub(/@([a-zA-Z0-9]+)/, '@<a href="http://twitter.com/\1">\1</a>')
+  	text = text.gsub(/@([a-zA-Z0-9_]+)/, '@<a href="http://twitter.com/\1">\1</a>')
   	# Replace a hash tag reference to a search link
   	text = text.gsub(/#(\S+)/, '<a href="http://twitter.com/search?q=%23\1">#\1</a>')
   end
