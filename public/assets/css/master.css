@@ -39,11 +39,11 @@ ol, ul {
 
 ul {
 	list-style-type: disc; }
-
+/*
 a:active {
 	position: relative;
 	top: 1px; }
-
+*/
 span.amp {
 	font-family: Georgia;
 	font-style: italic; }
