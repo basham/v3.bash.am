@@ -5,7 +5,7 @@
 
 require 'rubygems'
 # require 'sinatra'
-require '~/.gem/ruby/1.8/gems/sinatra-0.9.4/lib/sinatra.rb'
+require '/home/basham/.gem/ruby/1.8/gems/sinatra-0.9.4/lib/sinatra.rb'
 
 set :environment, :production
 disable :run
