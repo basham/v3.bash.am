@@ -1,8 +1,36 @@
+<%
+
+require 'twitter'
+
+user = 'chrisbasham'
+status = Twitter.user(user).status
+tweet = twitterize status.text
+time = timeago Time.parse(status.created_at)
+url = 'http://twitter.com/' + user
+
+%>
 
 <% extends 'views/base.erb' %>
-
+	
 <% block :content do %>
 
-	<h1>Work</h1>
+	<h1>Featured project</h1>
+
+<%= partial :portfolio_item, :locals => { :item => @featuredItem } %>
+	
+</article>
+
+<article>
+	
+	<section class="feature">
+		<aside>
+			<h2>Latest tweet</h2>
+			<p><a href="<%= url %>" rel="me">Follow me</a> on Twitter.</p>
+		</aside>
+		<blockquote>
+			<p><%= tweet %></p>
+			<cite>by <a href="<%= url %>" rel="me">@<%= user %></a> <a href="<%= url %>/status/<%= status.id %>"><%= time %></a></cite>
+		</blockquote>
+	</section>
 
 <% end %>
