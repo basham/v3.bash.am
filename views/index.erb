@@ -1,17 +1,51 @@
 <%
 
-require 'twitter'
+#require 'twitter'
 
 user = 'chrisbasham'
-status = Twitter.user(user).status
-tweet = twitterize status.text
-time = timeago Time.parse(status.created_at)
+#status = Twitter.user(user).status
+#tweet = twitterize status.text
+#time = timeago Time.parse(status.created_at)
 url = 'http://twitter.com/' + user
 
 %>
 
 <% extends 'views/base.erb' %>
+
+<% block :scripts do %>
+
+	<script type="text/javascript" src="/assets/js/jquery.jtwitter.js"></script>
+	<script type="text/javascript" src="/assets/js/jquery.latesttweet.js"></script>
+	<script type="text/javascript">
 	
+		$(document).ready(function(){
+			$.jTwitter('chrisbasham', 3, function(data) {
+				
+				var el = '#latestTweet ';
+				var t = $.enhanceTweet(data)[0];
+				var user = t.user;
+				
+				$(el + 'aside').append(
+					'<a href="' + user.profile_url + '" rel="me">' + 
+					'<img src="' + user.profile_image_url + '"/></a>');
+				$(el + 'blockquote p').html(t.html);
+				
+			//	$.each(data, function(i, p){
+			//		$(el + 'blockquote p').append(p.html);
+			//	});
+				
+				$(el + 'blockquote').append(
+					'<cite>' +
+					'by <a href="' + user.profile_url + '" rel="me">@' + user.screen_name + '</a> ' +
+					'<a href="' + t.status_url + '">time</a>' +
+					'</cite>');
+			});
+		});
+		
+	</script>
+		
+<% end %>
+
 <% block :content do %>
 
 	<h1>Featured project</h1>
@@ -22,15 +56,16 @@ url = 'http://twitter.com/' + user
 
 <article>
 	
-	<section class="feature">
+	<section id="latestTweet" class="feature">
 		<aside>
 			<h2>Latest tweet</h2>
 			<p><a href="<%= url %>" rel="me">Follow me</a> on Twitter.</p>
 		</aside>
 		<blockquote>
-			<p><%= tweet %></p>
-			<cite>by <a href="<%= url %>" rel="me">@<%= user %></a> <a href="<%= url %>/status/<%= status.id %>"><%= time %></a></cite>
+			<p>Acquiring latest...</p>
 		</blockquote>
 	</section>
+
+	<p id="log"></p>
 
 <% end %>
