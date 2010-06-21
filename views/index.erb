@@ -1,43 +1,32 @@
-<%
-
-#require 'twitter'
-
-user = 'chrisbasham'
-#status = Twitter.user(user).status
-#tweet = twitterize status.text
-#time = timeago Time.parse(status.created_at)
-url = 'http://twitter.com/' + user
-
-%>
 
 <% extends 'views/base.erb' %>
 
 <% block :scripts do %>
 
 	<script type="text/javascript" src="/assets/js/jquery.jtwitter.js"></script>
-	<script type="text/javascript" src="/assets/js/jquery.latesttweet.js"></script>
+	<script type="text/javascript" src="/assets/js/jquery.twitterize.js"></script>
 	<script type="text/javascript">
 	
 		$(document).ready(function(){
-			$.jTwitter('chrisbasham', 3, function(data) {
+			$.jTwitter('chrisbasham', 1, function(data) {
 				
 				var el = '#latestTweet ';
-				var t = $.enhanceTweet(data)[0];
+				var t = $.twitterize(data)[0];
 				var user = t.user;
 				
 				$(el + 'aside').append(
-					'<a href="' + user.profile_url + '" rel="me">' + 
-					'<img src="' + user.profile_image_url + '"/></a>');
+					'<p>' +
+					'<a style="float:right; margin: 0 0 0 2em" href="' + user.profile_url + '" rel="me">' + 
+						'<img src="' + user.profile_image_url + '"/></a>' +
+					'<a href="' + user.profile_url + '" rel="me">Follow me</a><br/>on Twitter.' +
+					'</p>');
+					
 				$(el + 'blockquote p').html(t.html);
-				
-			//	$.each(data, function(i, p){
-			//		$(el + 'blockquote p').append(p.html);
-			//	});
 				
 				$(el + 'blockquote').append(
 					'<cite>' +
-					'by <a href="' + user.profile_url + '" rel="me">@' + user.screen_name + '</a> ' +
-					'<a href="' + t.status_url + '">time</a>' +
+					'by @<a href="' + user.profile_url + '" rel="me">' + user.screen_name + '</a> ' +
+					'<a href="' + t.status_url + '">' + t.time_ago + '</a>' +
 					'</cite>');
 			});
 		});
@@ -59,10 +48,9 @@ url = 'http://twitter.com/' + user
 	<section id="latestTweet" class="feature">
 		<aside>
 			<h2>Latest tweet</h2>
-			<p><a href="<%= url %>" rel="me">Follow me</a> on Twitter.</p>
 		</aside>
 		<blockquote>
-			<p>Acquiring latest...</p>
+			<p></p>
 		</blockquote>
 	</section>
 

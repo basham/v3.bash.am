@@ -33,6 +33,9 @@ dl {
 p {
 	text-indent: 1em; }
 
+aside p {
+	text-indent: 0; }
+
 ol, ul {
 	margin-left: 1em;
 	list-style-type: decimal; }
