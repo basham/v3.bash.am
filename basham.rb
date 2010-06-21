@@ -2,7 +2,6 @@ require 'rubygems'
 require 'sinatra'
 require 'lib/Array'
 require 'lib/partials'
-require 'lib/TimeAgo'
 require 'lib/Djerb'
 
 # http://microformats.org/wiki/profile-uris
@@ -35,7 +34,6 @@ portfolio = [
 helpers do
   
   include Sinatra::Partials
-  include TimeAgo
   
   def renderer( template, b = lambda{} )
     template = 'views/' + template + '.erb'
@@ -86,15 +84,6 @@ helpers do
       s += ' ' + key + '="' + value.join(' ') + '"'
     end
     return s
-  end
-  
-  def twitterize( text )
-  	# Replace URLs with a link to the URL
-  	text = text.gsub(/([a-zA-Z]+:\/\/[\w.\?\/\%\#=]+)/, '<a href="\1">\1</a>')
-  	# Replace a user reference to a link to the user's profile
-  	text = text.gsub(/@([a-zA-Z0-9_]+)/, '@<a href="http://twitter.com/\1">\1</a>')
-  	# Replace a hash tag reference to a search link
-  	text = text.gsub(/#(\S+)/, '<a href="http://twitter.com/search?q=%23\1">#\1</a>')
   end
   
 end
