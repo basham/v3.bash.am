@@ -82,11 +82,11 @@
 	
 		plainToHTML: function( text ) {
 		  	// Replace URLs with a link to the URL
-		  	text = text.replace(/([a-zA-Z]+:\/\/[\w.\?\/\%\#=]+)/, '<a href="$1">$1</a>');
+		  	text = text.replace(/([a-zA-Z]+:\/\/[\w.\?\/\%\#=]+)/g, '<a href="$1">$1</a>');
 		  	// Replace a user reference to a link to the user's profile
-		  	text = text.replace(/@([a-zA-Z0-9_]+)/, '@<a href="' + $.twitterURL + '$1">$1</a>');
+		  	text = text.replace(/@([a-zA-Z0-9_]+)/g, '@<a href="' + $.twitterURL + '$1">$1</a>');
 		  	// Replace a hash tag reference to a search link
-		  	text = text.replace(/#(\S+)/, '<a href="' + $.twitterURL + 'search?q=%23$1">#$1</a>');
+		  	text = text.replace(/#(\S+)/g, '<a href="' + $.twitterURL + 'search?q=%23$1">#$1</a>');
 			return text;
 		}
 		
