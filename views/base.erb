@@ -38,6 +38,10 @@ end
 	<script type="text/javascript" src="/assets/js/fancyzoom.js"></script>
 	<script type="text/javascript" src="/assets/js/fancyzoomhtml.js"></script>
 	<script type="text/javascript">window.onload = function() { setupZoom(); }</script>
+	<!-- Should make IE recognize HTML5 elements -->
+	<!--[if IE]>
+	<script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+	<![endif]-->
 <% block :scripts do %><% end %>
 </head>
 

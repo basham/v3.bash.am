@@ -312,18 +312,48 @@ img.typekit-badge {
 	-moz-transition-duration: 500ms; }
 
 
-
+/*
 .energy-safe-kids figure span.a {
-	background: url(/assets/i/esk-pre-640.jpg) no-repeat; }
+	background: url(/assets/i/esk-pre-640-sprite.jpg) no-repeat 0 -320px; }
+
+.energy-safe-kids figure span.b {
+	-webkit-transition-property: opacity;
+	-moz-transition-property: opacity;
+	background: url(/assets/i/esk-pre-640-sprite.jpg) no-repeat; }
+	
+	
+	translate(0, 20px)
+	-webkit-transform: translate(100px, 0px);
+	
+	
+	
+.energy-safe-kids figure a:hover span.b {
+	opacity: 0; }
+*/
+.energy-safe-kids figure span.a {
+	background: url(/assets/i/esk-pre-640-bg.jpg) no-repeat; }
+
+.energy-safe-kids figure span.b {
+	-webkit-transition-property: background-position background-size;
+	-moz-transition-property: background-position background-size;
+	-webkit-background-size: 200px;
+	-moz-background-size: 200px;
+	background: url(/assets/i/esk-pre-640-ship.png) no-repeat 16% 180%; }
+
+.energy-safe-kids figure a:hover span.b {
+	-webkit-background-size: 300px;
+	-moz-background-size: 300px;
+	background-position: 20% 100%; }
+
 
 
 .waterwall figure span.a {
-	background: url(/assets/i/waterwall-pre-640a.jpg) no-repeat; }
+	background: url(/assets/i/waterwall-pre-640.jpg) no-repeat 0 -320px; }
 
 .waterwall figure span.b {
 	-webkit-transition-property: opacity;
 	-moz-transition-property: opacity;
-	background: url(/assets/i/waterwall-pre-640b.jpg) no-repeat; }
+	background: url(/assets/i/waterwall-pre-640.jpg) no-repeat; }
 	
 .waterwall figure a:hover span.b {
 	opacity: 0; }
