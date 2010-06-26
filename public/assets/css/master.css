@@ -295,4 +295,47 @@ footer #colophon li:first-child {
 	
 img.typekit-badge {
 	display: none !important; }
+
+
+
+
+
+.feature.portfolio figure {
+	height: 326px; }
+
+.feature.portfolio figure span {
+	display: block;
+	position: absolute;
+	width: 640px;
+	height: 320px;
+	-webkit-transition-duration: 500ms;
+	-moz-transition-duration: 500ms; }
+
+
+
+.energy-safe-kids figure span.a {
+	background: url(/assets/i/esk-pre-640.jpg) no-repeat; }
+
+
+.waterwall figure span.a {
+	background: url(/assets/i/waterwall-pre-640a.jpg) no-repeat; }
+
+.waterwall figure span.b {
+	-webkit-transition-property: opacity;
+	-moz-transition-property: opacity;
+	background: url(/assets/i/waterwall-pre-640b.jpg) no-repeat; }
 	
+.waterwall figure a:hover span.b {
+	opacity: 0; }
+
+
+.daybreak figure span.a {
+	background: url(/assets/i/daybreak-pre-640a.jpg) no-repeat 0 -1400px;
+	-webkit-transition-property: background-position;
+	-moz-transition-property: background-position; }
+
+.daybreak figure span.b {
+	background: url(http://daybreak.bash.am/images/tree.png) no-repeat 200px 40px; }
+
+.daybreak figure a:hover span.a {
+	background-position: 0 0; }
