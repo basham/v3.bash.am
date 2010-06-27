@@ -359,6 +359,32 @@ img.typekit-badge {
 	opacity: 0; }
 
 
+.ping-platform figure span.a {
+	background: url(/assets/i/ping-pre-640.jpg) no-repeat; }
+
+.ping-platform figure span.b {
+	width: 70px;
+	height: 90px;
+	left: 400px;
+	top: 18px;
+	background: url(/assets/i/ping-pre-hand.png) no-repeat; }
+
+.ping-platform figure a:hover span.b {
+	-webkit-transform: translate(100px, 0px); }
+
+.ping-platform figure span.c {
+	width: 70px;
+	height: 30px;
+	left: 400px;
+	top: 110px;
+	background: url(/assets/i/ping-pre-hand.png) no-repeat 0 -90px;
+	-webkit-transition-delay: .05s; }
+
+.ping-platform figure a:hover span.c {
+	-webkit-transition-delay: .05s;
+	-webkit-transform: translate(100px, 0px); }
+
+
 .daybreak figure span.a {
 	background: url(/assets/i/daybreak-pre-640a.jpg) no-repeat 0 -1400px;
 	-webkit-transition-property: background-position;
