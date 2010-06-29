@@ -61,11 +61,9 @@ hgroup {
 article aside {
 	margin: 0 4em 4em -320px;
 	float: left;
-	text-align: right;
 	display: block;
 	padding: 0 40px 0 0;
-	width: 240px;
-	border-right: 1px solid; }
+	width: 240px; }
 	
 header, article, footer section {
 	display: block;
@@ -79,9 +77,6 @@ article, footer section {
 
 article {
 	margin-bottom: 4em; }
-
-article dd {
-    margin-left: 1em; }
 
 figure {
 	clear: both;
@@ -144,7 +139,7 @@ h4, dt {
 	margin: 1em 0 0; }
 
 dd {
-	margin: 0 0 .25em; }
+	margin: 0 0 .25em 1em; }
 
 abbr {
 	border-bottom: 1px dotted; }
@@ -187,8 +182,7 @@ header h1 {
 header section hgroup {
 	float: left;
 	padding-left: 2em;
-	margin: 2.5em 0 0 2em;
-	border-left: 1px solid; }
+	margin: 2.5em 0 0 2em; }
 
 header h2 {
 	margin: 0;
@@ -233,10 +227,7 @@ article nav li a {
 footer {
 	display: block; }
 
-footer p {
-	text-indent: 0; }
-
-footer #summary, footer #colophon {
+footer section {
 	padding: 0;
 	width: 960px; }
 
@@ -244,33 +235,26 @@ footer aside {
 	float: left;
 	display: block;
 	padding: 0 40px;
-	margin-bottom: 2em;
-	border-left: 1px solid; }
+	margin-bottom: 2em; }
 
 footer aside:first-child {
 	width: 240px;
-	padding-left: 0;
-	border-width: 0; }
+	padding-left: 0; }
 
-footer aside:last-child, footer #summary #elsewhere {
-	padding-right: 0; }
-
-footer #summary #about, footer #summary figure {
-	width: 240px; }
-
-footer #colophon ul {
+footer ul {
 	clear: both;
 	margin: 1em 0; }
 
-footer #colophon aside:first-child {
-	text-align: right; }
-
-footer #colophon li {
-	padding: .5em 0 .5em 1em;
-	display: inline; }
+footer li {
+	display: inline;
+	padding: .5em 2em .5em 0; }
 	
-footer #colophon li:first-child {
-	padding-left: 0; }
+footer .icons li {
+	padding-left: 1.5em;
+	background: url(/assets/i/icon.gif) no-repeat 0 10px; }
+
+
+
 
 .feature {
 	clear: both;
@@ -395,3 +379,13 @@ img.typekit-badge {
 
 .daybreak figure a:hover span.a {
 	background-position: 0 0; }
+
+
+
+.icon {
+	display: block;
+	float: left;
+	width: 16px;
+	height: 16px;
+	margin: 4px 10px 0 0;
+	background-color: rgba(0, 0, 0, .1); }

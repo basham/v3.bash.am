@@ -67,65 +67,32 @@ end
 
 <article><% block :content do %><% end %></article>
 
-<footer><div class="contact vcard">
+<footer>
 
-	<section id="summary">
+	<section class="contact vcard">
 		<aside>
-			<h3><a href="/portfolio/<%= slug @randItem[:title] %>"><%= @randItem[:title] %></a></h3>
-			<figure><a href="/portfolio/<%= slug @randItem[:title] %>"><img src="/assets/i/<%= imgSlug @randItem %>-pre-240.jpg" width="240" height="120" alt="<%= @randItem[:title] %>"/></a></figure>
-			<p><a href="/portfolio">More portfolio items&#187;</a></p>
-		</aside>
-		<aside id="about">
-			<h3>About Chris Basham</h3>
-			<p><span class="fn">Chris Basham</span> is a <span class="title"><abbr title="User Experience">UX</abbr> designer and web developer</span> pursuing a masters in <a href="http://hcid.informatics.indiana.edu"><abbr title="Human-Computer Interaction Design">HCI/d</abbr></a> at <a href="http://www.iub.edu">Indiana University Bloomington</a>. <a href="/about">More&#187;</a></p>
-			<p><a href="/assets/pdf/basham-resume.pdf">Download</a> or <a href="/resume">view</a> his resume.</p>
-		</aside>
-		<aside>
-			<h3>Contact</h3>
-			<dl>
-				<dt>Phone</dt>
-				<dd class="tel">812 459-9891</dd>
-				<dt>Email</dt>
-				<dd><a href="mailto:chris@bash.am" class="email">chris@bash.am</a></dd>
-			</dl>
-			<p><a href="http://feeds.technorati.com/contacts/referrer">Download vCard</a></p>
-		</aside>
-		<aside id="elsewhere">
-			<h3>Elsewhere</h3>
-			<ul>
-				<li><a href="http://twitter.com/chrisbasham" rel="me">Twitter</a></li>
-				<li><a href="http://www.facebook.com/chrisbasham" rel="me">Facebook</a></li>
-				<li><a href="http://www.flickr.com/photos/chrisbasham" rel="me">Flickr</a></li>
-				<li><a href="http://digg.com/users/chrisbasham" rel="me">Digg</a></li>
-				<li><a href="http://delicious.com/cbasham" rel="me">Delicious</a></li>
-				<li><a href="http://www.linkedin.com/in/cbasham" rel="me">LinkedIn</a></li>
-				<li><a href="http://vimeo.com/basham" rel="me">Vimeo</a></li>
+			<ul class="icons">
+				<li><a href="http://twitter.com/chrisbasham" rel="me">Follow me on Twitter</a></li>
 			</ul>
-		</aside>
-	</section>
-
-	<section id="colophon">
-		<aside>
 			<ul>
-				<li><a href="http://validator.w3.org/check/referer" title="Check the validity of this site's HTML5">HTML5</a></li>
-				<li><a href="http://jigsaw.w3.org/css-validator/check/referer?profile=css3" title="Check the validity of this site's CSS3">CSS3</a></li>
-				<li><a href="http://microformats.org" title="This site supports Microformats">Microformats</a></li>
+				<li><span class="icon"></span><span class="icon"></span><span class="icon"></span><span class="icon"></span><span class="icon"></span><span class="icon"></span></li>
 			</ul>
 		</aside>
 		<aside>
+			<ul class="icons">
+				<li>812 459-9891</li>
+				<li><a href="mailto:chris@bash.am" class="email">chris@bash.am</a></li>
+				<li><a href="http://feeds.technorati.com/contacts/referrer">Download vCard</a></li>
+			</ul>
 			<ul>
-				<li><a href="http://creativecommons.org/licenses/by-nc-nd/3.0/" title="Creative Commons Attribution-Noncommercial-No Derivative Works 3.0 Unported" rel="license">Copyright &copy;</a> 2007-<%= Time.now.year %> <a href="http://bash.am" class="url">Chris Basham</a></li>
-			</ul>	
-		</aside>
-		<aside>
-			<ul>
+				<li><a href="http://creativecommons.org/licenses/by-nc-nd/3.0/" title="Creative Commons Attribution-Noncommercial-No Derivative Works 3.0 Unported" rel="license">Copyright &copy;</a> 2007&ndash;<%= Time.now.year %> <a href="http://bash.am" class="url fn">Chris Basham</a><span class="title hide"><abbr title="User Experience">UX</abbr> designer and web developer</span></li>
 				<li><a href="/colophon">Colophon</a></li>
 			</ul>
 		</aside>
 		<div class="clear"></div>
 	</section>
 
-</div></footer>
+</footer>
 
 <script type="text/javascript">
 var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
