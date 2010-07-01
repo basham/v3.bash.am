@@ -42,11 +42,11 @@ ol, ul {
 
 ul {
 	list-style-type: disc; }
-/*
-a:active {
-	position: relative;
-	top: 1px; }
-*/
+
+a, a span {
+	-webkit-transition: all .2s ease-out;
+	-moz-transition: opacity .2s ease-out; }
+
 span.amp {
 	font-family: Georgia;
 	font-style: italic; }
@@ -248,11 +248,45 @@ footer ul {
 footer li {
 	display: inline;
 	padding: .5em 2em .5em 0; }
-	
-footer .icons li {
-	padding-left: 1.5em;
-	background: url(/assets/i/icon.gif) no-repeat 0 10px; }
 
+#elsewhere .icons a, #elsewhere a span {
+	margin: 4px .5em 0 0;
+	display: block;
+	float: left;
+	width: 16px;
+	height: 16px;
+	text-indent: -9999px;
+	opacity: .5;
+	background: transparent url(/assets/i/icons.png) no-repeat 0 0; }
+
+#elsewhere a span {
+	margin-right: 0;
+	padding: 0 .25em 0; }
+
+#elsewhere .icons a:hover, #elsewhere a:hover span {
+	opacity: 1; }
+
+#elsewhere .icons .delicious {
+	background-position: 0 0; }
+	
+#elsewhere .icons .digg {
+	background-position: 0 -20px; }
+	
+#elsewhere .icons .facebook {
+	background-position: 0 -40px; }
+	
+#elsewhere .icons .flickr {
+	background-position: 0 -60px; }
+	
+#elsewhere .icons .linkedin {
+	background-position: 0 -80px; }
+
+#elsewhere .twitter span {
+	background-position: 0 -100px; }
+	
+#elsewhere .icons .vimeo {
+	background-position: 0 -120px; }
+	
 
 
 
@@ -292,8 +326,8 @@ img.typekit-badge {
 	position: absolute;
 	width: 640px;
 	height: 320px;
-	-webkit-transition-duration: 500ms;
-	-moz-transition-duration: 500ms; }
+	-webkit-transition: all .5s;
+	-moz-transition: all .5s; }
 
 
 /*
@@ -318,8 +352,6 @@ img.typekit-badge {
 	background: url(/assets/i/esk-pre-640-bg.jpg) no-repeat; }
 
 .energy-safe-kids figure span.b {
-	-webkit-transition-property: background-position background-size;
-	-moz-transition-property: background-position background-size;
 	-webkit-background-size: 200px;
 	-moz-background-size: 200px;
 	background: url(/assets/i/esk-pre-640-ship.png) no-repeat 16% 180%; }
@@ -335,8 +367,6 @@ img.typekit-badge {
 	background: url(/assets/i/waterwall-pre-640.jpg) no-repeat 0 -320px; }
 
 .waterwall figure span.b {
-	-webkit-transition-property: opacity;
-	-moz-transition-property: opacity;
 	background: url(/assets/i/waterwall-pre-640.jpg) no-repeat; }
 	
 .waterwall figure a:hover span.b {
@@ -354,7 +384,7 @@ img.typekit-badge {
 	background: url(/assets/i/ping-pre-hand.png) no-repeat; }
 
 .ping-platform figure a:hover span.b {
-	-webkit-transform: translate(100px, 0px); }
+	-webkit-transform: translate(100px, 0); }
 
 .ping-platform figure span.c {
 	width: 70px;
@@ -366,13 +396,11 @@ img.typekit-badge {
 
 .ping-platform figure a:hover span.c {
 	-webkit-transition-delay: .05s;
-	-webkit-transform: translate(100px, 0px); }
+	-webkit-transform: translate(100px, 0); }
 
 
 .daybreak figure span.a {
-	background: url(/assets/i/daybreak-pre-640a.jpg) no-repeat 0 -1400px;
-	-webkit-transition-property: background-position;
-	-moz-transition-property: background-position; }
+	background: url(/assets/i/daybreak-pre-640a.jpg) no-repeat 0 -1400px; }
 
 .daybreak figure span.b {
 	background: url(http://daybreak.bash.am/images/tree.png) no-repeat 200px 40px; }
