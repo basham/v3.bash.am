@@ -43,7 +43,13 @@ ol, ul {
 ul {
 	list-style-type: disc; }
 
-a, a span {
+a {
+	text-decoration: none; }
+
+p a {
+	text-decoration: underline; }
+	
+a, a span, a img {
 	-webkit-transition: all .2s ease-out;
 	-moz-transition: opacity .2s ease-out; }
 
@@ -81,19 +87,11 @@ article {
 figure {
 	clear: both;
 	margin: 0 0 3em;
-	left: -1px;
 	position: relative;
 	float: left;
-	display: block;
-	width: 640px;
-	padding: 1px;
-	text-shadow: none;
-	-webkit-border-bottom-left-radius: 5px;
-	-webkit-border-bottom-right-radius: 5px;
-	-moz-border-radius: 0 0 5px 5px;
-	border-radius: 0 0 5px 5px; }
+	display: block; }
 
-figure img {
+figure img, .feature figure a {
 	position: relative;
 	margin: -1px 0 0 -1px;
 	border: 1px solid transparent; }
@@ -101,6 +99,15 @@ figure img {
 figure a:hover img {
 	background-color: transparent;
 	border: 1px solid; }
+
+figure.caption {
+	width: 640px;
+	padding: 1px;
+	text-shadow: none;
+	-webkit-border-bottom-left-radius: 5px;
+	-webkit-border-bottom-right-radius: 5px;
+	-moz-border-radius: 0 0 5px 5px;
+	border-radius: 0 0 5px 5px; }
 
 figure.aside {
 	margin: 0 4em 4em -320px;
@@ -120,10 +127,14 @@ figure p {
 	border-width: 1px 0; }
 	
 .figure-group figure {
+	padding: 0;
 	clear: none;
 	margin: 2em 0 2em 2em;
-	display: inline;
-	width: 220px; }
+	width: 220px;
+	-webkit-border-bottom-left-radius: 0;
+	-webkit-border-bottom-right-radius: 0;
+	-moz-border-radius: 0;
+	border-radius: 0; }
 
 .figure-group figure:first-child {
 	margin-left: .5em; }
@@ -182,7 +193,7 @@ header h1 {
 header section hgroup {
 	float: left;
 	padding-left: 2em;
-	margin: 2.5em 0 0 2em; }
+	margin: 2.8em 0 0 2em; }
 
 header h2 {
 	margin: 0;
@@ -197,7 +208,7 @@ nav ul {
 	list-style-type: none; }
 
 nav li {
-	padding: 1em 1em 1em 0;
+	padding: 1em 2em 1em 0;
 	display: inline; }
 
 nav li a {
@@ -256,7 +267,7 @@ footer li {
 	width: 16px;
 	height: 16px;
 	text-indent: -9999px;
-	opacity: .5;
+	opacity: .75;
 	background: transparent url(/assets/i/icons.png) no-repeat 0 0; }
 
 #elsewhere a span {
@@ -294,9 +305,6 @@ footer li {
 	clear: both;
 	display: block;
 	margin-top: 4em; }
-
-.feature aside {
-	margin-top: 2em; }
 	
 .feature aside h2 {
 	margin: 0 0 .35em; }
@@ -304,6 +312,10 @@ footer li {
 .feature figure {
 	clear: none;
 	float: none; }
+
+.feature figure.right {
+	float: right;
+	margin: 0; }
 
 .clear {
 	clear: both; }
@@ -321,11 +333,17 @@ img.typekit-badge {
 .feature.portfolio figure {
 	height: 326px; }
 
+.feature.portfolio figure a {
+	display: block;
+	width: 640px;
+	height: 320px;
+	border: 1px solid transparent; }
+	
 .feature.portfolio figure span {
 	display: block;
 	position: absolute;
-	width: 640px;
-	height: 320px;
+	width: 100%;
+	height: 100%;
 	-webkit-transition: all .5s;
 	-moz-transition: all .5s; }
 

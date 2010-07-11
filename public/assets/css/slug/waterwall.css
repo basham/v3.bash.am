@@ -7,13 +7,10 @@ body {
 	border-color: rgba(218, 75, 59, .9);
 	background: rgb(174, 207, 233) url(/assets/i/waterwall-bg.png) repeat-x 50% -160px; }
 
-a:link {
+a:link, a:visited {
 	color: rgba(218, 75, 59, .9); }
 
-a:visited {
-	color: rgba(164, 50, 44, .6); }
-
-a:hover {
+a:hover, header a:hover {
 	color: rgba(164, 50, 44, .9); }
 	
 a:hover, a:active {
