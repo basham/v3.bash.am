@@ -45,9 +45,10 @@ ul {
 
 a {
 	text-decoration: none; }
-
+/*
 p a {
 	text-decoration: underline; }
+*/
 	
 a, a span, a img {
 	-webkit-transition: all .2s ease-out;
@@ -348,24 +349,35 @@ img.typekit-badge {
 	-moz-transition: all .5s; }
 
 
-/*
-.energy-safe-kids figure span.a {
-	background: url(/assets/i/esk-pre-640-sprite.jpg) no-repeat 0 -320px; }
 
-.energy-safe-kids figure span.b {
-	-webkit-transition-property: opacity;
-	-moz-transition-property: opacity;
-	background: url(/assets/i/esk-pre-640-sprite.jpg) no-repeat; }
-	
-	
-	translate(0, 20px)
-	-webkit-transform: translate(100px, 0px);
-	
-	
-	
-.energy-safe-kids figure a:hover span.b {
+.zygomote figure span.a {
+	background: url(/assets/i/zygomote-pre-640.jpg) no-repeat; }
+
+.zygomote figure span.b {
+	background: url(/assets/i/zygomote-pre-together.jpg) no-repeat 387px 129px; }
+
+.zygomote figure span.c, .zygomote figure span.d {
+	width: 100px;
+	height: 140px;
+	top: 125px;
+	left: 50px;
+	background: url(/assets/i/zygomote-pre-walkers.png) no-repeat; }
+
+.zygomote figure span.d {
+	background-position: -100px 0; }
+
+.zygomote figure span.b, .zygomote figure span.d, .zygomote figure a:hover span.c {
 	opacity: 0; }
-*/
+
+.zygomote figure a:hover span.b, .zygomote figure a:hover span.d {
+	opacity: 1; }
+
+.zygomote figure a:hover span.c, .zygomote figure a:hover span.d {
+	top: 130px;
+	left: 100px; }
+
+
+
 .energy-safe-kids figure span.a {
 	background: url(/assets/i/esk-pre-640-bg.jpg) no-repeat; }
 
