@@ -8,6 +8,7 @@
 	<script type="text/javascript">
 	
 		$(document).ready(function(){
+			/*
 			$.jTwitter('chrisbasham', 1, function(data) {
 				
 				var el = '#latestTweet ';
@@ -29,6 +30,7 @@
 					'<a href="' + t.status_url + '">' + t.time_ago + '</a>' +
 					'</cite>');
 			});
+			*/
 		});
 		
 	</script>
@@ -37,15 +39,21 @@
 
 <% block :content do %>
 
+	<aside class="hide" style="margin-top: 6em"><p style="">Replaced 2003 Ford Escape rear windshield wipers for first time since 2003. No more half-hearted squeegeeing. Appraising with mud-balloons.</p></aside>
+	<h2>I'm a <abbr title="User Experience">UX</abbr> designer and web developer <a href="/resume">pursuing</a> a masters in <a href="http://hcid.informatics.indiana.edu"><abbr title="Human-Computer Interaction Design">HCI/d</abbr></a> at <a href="http://www.iub.edu">Indiana University Bloomington</a>. I'm <a href="/about">passionate about</a> prototyping, DIY, sketching, grammar and flying discs. Sometimes I <a href="/portfolio">do</a>, <a href="#">try</a> or <a href="http://twitter.com/chrisbasham">say</a> something intelligent.</h2>
+
+	<blockquote class="hide" style="padding-left: 4em"><p style="font-size: 1.6em"><figure><a href="http://twitter.com/chrisbasham" rel="me"><img src="http://a3.twimg.com/profile_images/645492609/ChrisProfile_normal.jpg"></a></figure>Replaced 2003 Ford Escape rear windshield wipers for first time since 2003. No more half-hearted squeegeeing. Appraising with mud-balloons.</p></blockquote>
+
+</article>
+
+<article>
+
 	<h1 class="hide">Featured project</h1>
 
 <%= partial :portfolio_item, :locals => { :item => @featuredItem } %>
 	
-</article>
-
-<article>
 	
-	<section id="latestTweet" class="feature">
+	<section id="latestTweet" class="feature hide">
 		<aside>
 			<h2>Latest tweet</h2>
 		</aside>
@@ -53,7 +61,5 @@
 			<p></p>
 		</blockquote>
 	</section>
-
-	<p id="log"></p>
 
 <% end %>

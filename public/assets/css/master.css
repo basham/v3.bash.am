@@ -130,15 +130,11 @@ figure p {
 .figure-group figure {
 	padding: 0;
 	clear: none;
-	margin: 2em 0 2em 2em;
-	width: 220px;
-	-webkit-border-bottom-left-radius: 0;
-	-webkit-border-bottom-right-radius: 0;
-	-moz-border-radius: 0;
-	border-radius: 0; }
+	margin: 2em 0 1.5em 2em;
+	width: 220px; }
 
 .figure-group figure:first-child {
-	margin-left: .5em; }
+	margin-left: 1em; }
 
 .figure-group.six figure {
 	width: 140px; }
@@ -330,6 +326,12 @@ img.typekit-badge {
 
 
 
+.feature h1 {
+	font-size: 1.5em;
+	text-transform: uppercase;
+	font-weight: bold;
+	margin: 0 0 1em;
+}
 
 .feature.portfolio figure {
 	height: 326px; }
