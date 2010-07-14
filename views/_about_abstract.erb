@@ -1,0 +1,42 @@
+<%
+
+passions = [
+	'prototyping',
+	'<abbr title="Do it yourself">DIY</abbr>',
+	'sketching',
+	'grammar',
+	'blueberry muffins',
+	'God',
+	'church',
+	'graphic novels',
+	'sci-fi',
+	'disc golf',
+	'Ultimate',
+	'running barefoot',
+	'audiobooks',
+	'paper craft',
+	'sand volleyball',
+	'Settlers of Catan',
+	'movies']
+	
+adjectives = [
+	'intelligent',
+	'radical',
+	'curious',
+	'awkward',
+	'impossible',
+	'extraordinary',
+	'fantastic',
+	'ridiculous',
+	'creative',
+	'clever',
+	'intriguing',
+	'absurd',
+	'marvelous',
+	'irrational',
+	'inconceivable',
+	'unpredictable',
+	'pleasant']
+
+%>
+	<h2>I'm a <abbr title="User Experience">UX</abbr> designer and web developer <a href="/resume">pursuing</a> a masters in <a href="http://hcid.informatics.indiana.edu"><abbr title="Human-Computer Interaction Design">HCI/d</abbr></a> at <a href="http://www.iub.edu">Indiana University Bloomington</a>. I'm <a href="/about">passionate about</a> <%= passions.randomList(64) %>.<br/>Sometimes I <a href="/portfolio">do</a>, <a href="#">try</a> or <a href="http://twitter.com/chrisbasham">say</a> something <%= adjectives.random %>.</h2>

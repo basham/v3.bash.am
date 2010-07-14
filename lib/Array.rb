@@ -26,4 +26,35 @@ class Array
     return i > 0 ? i - 1 : nil
   end
   
+  def random( remove = false )
+    r = rand(self.length)
+    return remove ? self.delete_at(r) : self[r]
+  end
+  
+  def randomList( maxChars = 100 )
+    sum = 0
+    a = []
+    f = (0...self.size).to_a # Array of self's indexes
+    delimiter = ', '
+    conjunction = ' and '
+
+    maxChars -= conjunction.length
+
+    while f.length > 0 # Stop when possibles end
+      el = self[ f.random(true) ] # Randomly retrieve an el and remove potential to be retrieved again
+      if sum + el.stripMarkup.length < maxChars # Tests if new el is within char limit
+        sum += el.stripMarkup.length
+        maxChars -= delimiter.length
+        a.push( el )
+      end
+    end
+    
+    if a.length <= 1
+      return a.to_s
+    end
+    
+    last = a.pop
+    return a.join( delimiter ) + conjunction + last
+  end
+  
 end

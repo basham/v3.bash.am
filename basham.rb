@@ -1,6 +1,7 @@
 require 'rubygems'
 require 'sinatra'
 require 'lib/Array'
+require 'lib/String'
 require 'lib/partials'
 require 'lib/Djerb'
 
