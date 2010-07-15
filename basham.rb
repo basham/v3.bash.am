@@ -91,10 +91,9 @@ end
 
 before do
   @portfolio = portfolio
-  @randItem = portfolio[rand(portfolio.size)]
-  @featuredItem = portfolio.first
-  #@featuredItem = portfolio[rand(portfolio.size-1) + 1];
-  #@featuredItem = portfolio[3]
+  @randItem = portfolio.random
+  #@featuredItem = portfolio.first
+  @featuredItem = portfolio.random
   url = cssURI uri
   @css = File.exists?( 'public' + url ) ? url : ''
   @title = smartTitle
