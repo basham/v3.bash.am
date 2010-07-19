@@ -21,6 +21,8 @@ $mfProfiles = {
 static = [ '', 'portfolio', 'resume', 'about', 'colophon' ]
 
 portfolio = [
+  { :title => 'Pirate Navigator', :slug => 'pirate-navigator',
+    :summary => 'Pirate Navigator is a museum exhibit prototype engaging participants in 17th Century navigational techniques.' },
   { :title => 'Zygomote', :slug => 'zygomote',
     :summary => 'Zygomote is an iPhone application encouraging users to walk more regularly, as a submission to the <a href="http://www.chi2010.org/">CHI 2010</a> <a href="http://www.chi2010.org/authors/cfp-sdc.html">Student Design Competition</a>.' },
   { :title => 'Energy Safe Kids', :slug => 'energy-safe-kids', :imgSlug => 'esk',
