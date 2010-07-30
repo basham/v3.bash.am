@@ -4,11 +4,12 @@
 # $LOAD_PATH.unshift('~/.gem/ruby/1.8/gems/twitter-0.8.0/lib')
 
 require 'rubygems'
-# require 'sinatra'
-require '~/.gem/ruby/1.8/gems/sinatra-0.9.4/lib/sinatra.rb'
+require 'sinatra'
+#require '~/.gem/ruby/1.8/gems/sinatra-0.9.4/lib/sinatra.rb'
 
 set :environment, :production
 disable :run
 
-require 'basham.rb'
-run Sinatra::Application
+require 'basham'
+#run Sinatra::Application
+run Basham.new
