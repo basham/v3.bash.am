@@ -47,13 +47,23 @@ class Basham
       end
       
       def title
-        @title || 'wootsyeah'
+        @title
+      end
+  
+      def smartTitle
+        t = 'Chris Basham'
+        (!defined? title) || title.empty? ? t : title + ' | ' + t
       end
   
       def css
-        @css || ''
+        @css
       end
   
+      def smartCSS
+        url = '/assets/css/slug/' + ( css || @uri ) + '.css'
+        File.exists?( 'public' + url ) ? url : false
+      end
+      
       def year
         Time.now.year
       end

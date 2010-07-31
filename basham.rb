@@ -3,10 +3,7 @@ require 'sinatra/base'
 require 'mustache/sinatra'
 require 'lib/Array'
 require 'lib/String'
-require 'lib/partials'
-require 'lib/Djerb'
 
-#run Basham.new
 class Basham < Sinatra::Base
   
   register Mustache::Sinatra
@@ -47,97 +44,36 @@ class Basham < Sinatra::Base
       :summary => '<a href="http://daybreak.bash.am">Daybreak</a> is a collaborative design experiment with <a href="http://www.tonydewan.com/">Tony Dewan</a> as a submission to the <a href="http://www.csszengarden.com/">CSS Zen Garden</a> project. Tony produced the graphics and aesthetic of the piece, while I coded the CSS and solved technical roadblocks.' } ]
   
   helpers do
-  
-    include Sinatra::Partials
-  
-    def renderer( template, b = lambda{} )
-      template = 'views/' + template + '.erb'
-      Djerb.run template, b
-    end
-  
-    def title( label = '' )
-      title = 'Chris Basham'
-      if ( label != '' )
-        title = label + ' | ' + title
-      end
-      return title
-    end
-  
-    def smartTitle()
-      return title uri.capitalize
-    end
-  
+
     def uri()
       return request.path_info.match(/(.*)\/(.*)/).captures[1]
     end
-  
-    def slug( label )
-      return label.downcase.gsub(' ', '-')
-    end
-  
-    def imgSlug( portfolioItem )
-      return portfolioItem[:imgSlug] if portfolioItem.key?(:imgSlug)
-      return slug portfolioItem[:title]
-    end
 
-    def cssURI( slug )
-      return '/assets/css/slug/' + slug + '.css'
-    end
-
-    def tagAttr( hash )
-      s = ''
-      hash.each do |key, value|
-        next if value == nil or value.length == 0
-        if key == 'profile':
-          v = []
-          value.each do | p |
-            v.push( $mfProfiles[p] )
-          end
-          value = v
-          next if value.empty?
-        end
-        s += ' ' + key + '="' + value.join(' ') + '"'
-      end
-      return s
-    end
-  
   end
 
   before do
     @portfolio = portfolio
-    @randItem = portfolio.random
-    #@featuredItem = portfolio.first
-    @featuredItem = portfolio.random
-    url = cssURI uri
-    @css = File.exists?( 'public' + url ) ? url : ''
-    @title = smartTitle
-  end
-
-  get '/' do
-    @title = 'jlkajsdflkajs'
-    mustache :index
+    @title = uri.capitalize
+    @uri = uri
   end
 
   static.each do |path|
     get '/' + path + '/?' do
-      renderer ( path == '' ? 'index' : path )
+      mustache ( path == '' ? 'index' : path )
     end
   end
-
+  
   portfolio.each do |item|
     get '/portfolio/' + item[:slug] + '/?' do
-      @title = title item[:title]
       @item = item
       @next = portfolio.prev( item )
       @prev = portfolio.next( item )
-      renderer 'portfolio/' + item[:slug]
+      mustache item[:slug]
     end
   end
 
   not_found do
-    @css = cssURI '404'
-    @title = title '404'
-  	renderer '404'
+  	mustache :error404
   end
 
 end

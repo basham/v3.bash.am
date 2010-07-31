@@ -3,7 +3,7 @@
 
 <head>
 
-	<title>{{title}}</title>
+	<title>{{smartTitle}}</title>
 	
 	<meta http-equiv="content-type" content="text/html; charset=utf-8" />
 	<meta name="robots" content="follow, all" />
@@ -19,7 +19,8 @@
 	{{/formats}}
 	
 	<link rel="stylesheet" href="/assets/css/main.css" type="text/css" media="screen" />
-	{{#css}}<link rel="stylesheet" href="{{css}}" type="text/css" media="screen" />{{/css}}
+	{{#smartCSS}}<link rel="stylesheet" href="{{smartCSS}}" type="text/css" media="screen" />
+	{{/smartCSS}}
 	
 	<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.0/jquery.min.js"></script>
 	<script type="text/javascript" src="http://use.typekit.com/oim8zsd.js"></script>
@@ -33,9 +34,10 @@
 	<![endif]-->
 	{{#scripts}}<script type="text/javascript" src="{{script}}"></script>
 	{{/scripts}}
+
 </head>
 
-<body{{bodyAttr}}>
+<body{{{bodyAttr}}}>
 
 <header>
 	<section>
@@ -55,7 +57,11 @@
 	</nav>
 </header>
 
-<article>{{{yield}}}</article>
+<article>
+
+{{{yield}}}
+
+</article>
 
 <footer>
 	<section class="contact vcard">
