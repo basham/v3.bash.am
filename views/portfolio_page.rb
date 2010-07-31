@@ -2,6 +2,10 @@ class Basham
   module Views
     class PortfolioPage < Layout
 
+      def initialize
+        self.class.path = 'templates/portfolio/'
+      end
+
       def title
         @item[:title]
       end

@@ -68,7 +68,7 @@ class Basham < Sinatra::Base
       @item = item
       @next = portfolio.prev( item )
       @prev = portfolio.next( item )
-      mustache item[:slug]
+      mustache item[:slug], :views => 'views/portfolio'
     end
   end
 
