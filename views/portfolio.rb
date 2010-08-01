@@ -1,9 +1,11 @@
+require 'data/models'
+
 class Basham
   module Views
     class Portfolio < Layout
    
       def portfolio
-        @portfolio
+        Models::PROJECTS
       end
       
     end

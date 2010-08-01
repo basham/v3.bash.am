@@ -1,49 +1,15 @@
+require 'data/models'
+
 class Basham
   module Views
     class Layout < Mustache
 
       def passions
-        p = [
-        	'prototyping',
-        	'<abbr title="Do it yourself">DIY</abbr>',
-        	'sketching',
-        	'grammar',
-        	'blueberry muffins',
-        	'God',
-        	'church',
-        	'graphic novels',
-        	'sci-fi',
-        	'disc golf',
-        	'Ultimate',
-        	'running barefoot',
-        	'audiobooks',
-        	'paper craft',
-        	'sand volleyball',
-        	'Settlers of Catan',
-        	'movies']
-        p.randomList(64)
+        Models::PASSIONS.randomList(64)
       end
 
       def adjective
-        adjectives = [
-        	'intelligent',
-        	'radical',
-        	'curious',
-        	'awkward',
-        	'impossible',
-        	'extraordinary',
-        	'fantastic',
-        	'ridiculous',
-        	'creative',
-        	'clever',
-        	'intriguing',
-        	'absurd',
-        	'marvelous',
-        	'irrational',
-        	'inconceivable',
-        	'unpredictable',
-        	'pleasant']
-        adjectives.random
+        Models::ADJECTIVES.random
       end
       
       def title
@@ -51,8 +17,7 @@ class Basham
       end
   
       def smartTitle
-        t = 'Chris Basham'
-        (!defined? title) || title.empty? ? t : title + ' | ' + t
+        (!defined? title) || title.empty? ? Models::TITLE : title + ' | ' + Models::TITLE
       end
   
       def css
@@ -69,15 +34,15 @@ class Basham
       end
   
       def formats
-        mfs = [:hcard, :relLicense, :xfn]
+        mfd = Models::MF_DEFAULT
         if defined? mf then
-        	mfs.concat(mf)
+        	mfd.concat(mf)
         end
         f = []
-        for format in mfs do
-          f.push( { :format => $mfProfiles[format] } )
+        for format in mfd do
+          f.push( { :format => Models::MF_PROFILES[format] } )
         end
-        return f
+        f
       end
   
       def bodyAttr
@@ -95,7 +60,7 @@ class Basham
           if key == 'profile':
             v = []
             value.each do | p |
-              v.push( $mfProfiles[p] )
+              v.push( Models::MF_PROFILES[p] )
             end
             value = v
             next if value.empty?

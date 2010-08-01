@@ -1,3 +1,5 @@
+require 'data/models'
+
 class Basham
   module Views
     class Index < Layout
@@ -9,7 +11,7 @@ class Basham
       end
     
       def featured
-        @portfolio.random
+        Models::PROJECTS.random
       end
 
     end

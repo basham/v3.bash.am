@@ -11,5 +11,4 @@ set :environment, :production
 disable :run
 
 require 'basham'
-#run Sinatra::Application
 run Basham.new
