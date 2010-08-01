@@ -17,21 +17,19 @@ class Basham < Sinatra::Base
   }
 
   helpers do
-
-    def uri()
+    def slug
       return request.path_info.match(/(.*)\/(.*)/).captures[1]
     end
-
   end
 
   before do
-    @title = uri.capitalize
-    @slug = uri
+    @title = slug.capitalize
+    @slug = slug
   end
 
   STATIC.each do |path|
     get '/' + path + '/?' do
-      mustache ( path == '' ? :index : path )
+      mustache ( path.empty? ? :index : path )
     end
   end
 
