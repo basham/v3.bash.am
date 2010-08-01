@@ -25,7 +25,7 @@ class Basham < Sinatra::Base
 
   before do
     @title = uri.capitalize
-    @uri = uri
+    @slug = uri
   end
 
   Models::STATIC.each do |path|

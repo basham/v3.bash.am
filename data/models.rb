@@ -12,7 +12,7 @@ class Basham
       end
 
       def slug
-        @title.downcase.gsub(/\s/, '-')
+        @title.toSlug
       end
   
     end

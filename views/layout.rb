@@ -25,7 +25,7 @@ class Basham
       end
   
       def smartCSS
-        url = '/assets/css/slug/' + ( css || @uri ) + '.css'
+        url = '/assets/css/slug/' + ( css || @slug ) + '.css'
         File.exists?( 'public' + url ) ? url : false
       end
       
