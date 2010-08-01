@@ -8,7 +8,7 @@ class Basham < Sinatra::Base
   
   register Mustache::Sinatra
   require 'views/layout'
-  require 'data/models'
+  require 'models/models'
   include Models
 
   set :mustache, {

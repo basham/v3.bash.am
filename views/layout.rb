@@ -1,4 +1,4 @@
-require 'data/models'
+require 'models/models'
 
 class Basham
   module Views
