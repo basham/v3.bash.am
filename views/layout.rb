@@ -3,13 +3,14 @@ require 'data/models'
 class Basham
   module Views
     class Layout < Mustache
+      include Models
 
       def passions
-        Models::PASSIONS.randomList(64)
+        PASSIONS.randomList(64)
       end
 
       def adjective
-        Models::ADJECTIVES.random
+        ADJECTIVES.random
       end
       
       def title
@@ -17,7 +18,7 @@ class Basham
       end
   
       def smartTitle
-        (!defined? title) || title.empty? ? Models::TITLE : title + ' | ' + Models::TITLE
+        (!defined? title) || title.empty? ? TITLE : title + ' | ' + TITLE
       end
   
       def css
@@ -40,7 +41,7 @@ class Basham
         end
         f = []
         for format in mfd do
-          f.push( { :format => Models::MF_PROFILES[format] } )
+          f.push( { :format => MF_PROFILES[format] } )
         end
         f
       end
@@ -60,7 +61,7 @@ class Basham
           if key == 'profile':
             v = []
             value.each do | p |
-              v.push( Models::MF_PROFILES[p] )
+              v.push( MF_PROFILES[p] )
             end
             value = v
             next if value.empty?

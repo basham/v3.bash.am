@@ -7,15 +7,15 @@ class Basham
       end
 
       def title
-        @item.title
+        @project.title
       end
 
       def summary
-        @item.summary
+        @project.summary
       end
       
       def slug
-        @item.slug
+        @project.slug
       end
       
       # Dynamically sets the partial to the appropriate portfolio project
