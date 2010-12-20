@@ -59,7 +59,9 @@ class Basham
     	'paper craft',
     	'sand volleyball',
     	'Settlers of Catan',
-    	'movies']
+    	'movies',
+    	'pens',
+    	'mind mapping']
     	
   	ADJECTIVES = [
     	'intelligent',
