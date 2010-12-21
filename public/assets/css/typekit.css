@@ -5,7 +5,7 @@ body, header h1 {
 header h1 {
 	margin: 0 0 0 -160px; }
 
-h1, h2, h3, h4, dt, blockquote cite {
+h1, h2, h3, h4, blockquote cite {
 	font-family: "gesta-1","gesta-2", HelveticaNeue-Light, 'Helvetica Neue Light', 'Helvetica Neue', Helvetica, arial, sans-serif; }
 
 h3 {

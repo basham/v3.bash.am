@@ -8,7 +8,7 @@ body {
 	font-family: Georgia, serif;
 	border-top: 1px solid; }
 
-h1, h2, h3, h4, dt {
+h1, h2, h3, h4 {
 	font-weight: normal;
 	margin: 2em 0 1em;
 	font-family: HelveticaNeue-Light, 'Helvetica Neue Light', 'Helvetica Neue', Helvetica, arial, sans-serif; }
@@ -23,7 +23,7 @@ h3 {
 	font-size: 1.8em;
 	font-weight: bold; }
 
-p, ol, ul, dd {
+p, ol, ul, dt, dd {
 	font-size: 1.6em;
 	margin: 0 0 1.5em; }
 
@@ -33,7 +33,7 @@ dl {
 p {
 	text-indent: 1em; }
 
-aside p {
+aside p, .feature p {
 	text-indent: 0; }
 
 ol, ul {
@@ -66,17 +66,16 @@ hgroup {
 	display: block; }
 
 article aside {
-	margin: 0 4em 4em -320px;
+	margin: 0 40px 4em -340px;
 	float: left;
 	display: block;
-	padding: 0 40px 0 0;
-	width: 240px; }
+	width: 300px; }
 	
 header, article, footer section {
 	display: block;
 	clear: both;
 	width: 640px;
-	padding: 0 0 0 320px;
+	padding: 0 0 0 340px;
 	margin: 0 auto; }
 
 article, footer section {
@@ -122,8 +121,8 @@ figure p {
 .figure-group {
 	float: left;
 	display: block;
-	width: 960px;
-	margin: 0 0 3em -320px;
+	width: 980px;
+	margin: 0 0 3em -340px;
 	border: 1px solid;
 	border-width: 1px 0; }
 	
@@ -142,12 +141,11 @@ figure p {
 dl ul {
 	font-size: 1em; }
 
-h4, dt {
-	font-size: 1.8em;
+dt {
 	margin: 1em 0 0; }
 
 dd {
-	margin: 0 0 .25em 1em; }
+	margin: 0 0 0 1em; }
 
 abbr {
 	border-bottom: 1px dotted; }
@@ -237,16 +235,15 @@ footer {
 
 footer section {
 	padding: 0;
-	width: 960px; }
+	width: 980px; }
 
 footer aside {
 	float: left;
 	display: block;
-	padding: 0 40px;
-	margin-bottom: 2em; }
+	margin: 0 40px 2em 0; }
 
 footer aside:first-child {
-	width: 240px;
+	width: 300px;
 	padding-left: 0; }
 
 footer ul {
@@ -356,6 +353,46 @@ img.typekit-badge {
 
 
 
+
+.feature h1 {
+	font-size: 1.5em;
+	text-transform: uppercase;
+	font-weight: bold;
+	margin: 0 0 1em; }
+
+.labart {
+	padding: 0;
+	width: 980px; }
+
+.labart .items section:last-child {
+	margin-right: 0; }
+
+.feature.lab {
+	width: 300px;
+	float: left;
+	clear: none;
+	margin-right: 40px; }
+
+.feature.lab figure {
+	height: 150px; }
+
+.feature.lab figure a {
+	display: block;
+	width: 300px;
+	height: 150px;
+	border: 1px solid transparent; }
+	
+.feature.lab figure span {
+	display: block;
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	-webkit-transition: all .5s;
+	-moz-transition: all .5s;
+	transition: all .5s; }
+
+
+
 .zygomote figure span.a {
 	background: url(/assets/i/zygomote-pre-640.jpg) no-repeat; }
 
@@ -445,6 +482,16 @@ img.typekit-badge {
 	background-position: 0 0; }
 
 
+.pirate-navigator figure span.a {
+	background: url(/assets/i/daybreak-pre-640a.jpg) no-repeat 0 -1400px; }
+
+.pirate-navigator figure span.b {
+	background: url(http://daybreak.bash.am/images/tree.png) no-repeat 200px 40px; }
+
+.pirate-navigator figure a:hover span.a {
+	background-position: 0 0; }
+
+
 
 .button {
 	padding: .5em 1em;
@@ -465,3 +512,54 @@ img.typekit-badge {
 .button:active {
 	background: -webkit-gradient(linear, 0 0, 0 100%, from(#eaf1fc), to(#FFFFFF));
 	background: -moz-linear-gradient(top, #eaf1fc, #FFFFFF); }
+
+
+.divtitle {
+	margin: 0 0 0 -320px;
+	padding: 0 0 0 320px;
+	border-bottom: 1px solid rgba(0, 0, 0, .05);
+	background: rgba(0, 0, 0, .05);
+	background: -webkit-gradient(linear, left bottom, left top,
+		color-stop(0, rgba(0, 0, 0, .05)), color-stop(1, rgba(0, 0, 0, .1)) );
+	background: -moz-linear-gradient(center bottom,
+    rgba(0, 0, 0, .1) 0%, rgba(0, 0, 0, .05) 100% );
+}
+
+.divtitle2 {
+	margin: -20px 0 0 -340px;
+	display: block;
+}
+
+.divtitle2 span {
+	padding: 5px 20px;
+	border: 1px solid rgba(0, 0, 0, .1);
+	background: #F5F5F5;
+	border-radius: 5px;
+}
+
+article h1 {
+	margin: 1em 0 0;
+	font-size: 3.6em;
+	font-weight: 300; }
+
+article h2x {
+	margin-topx: 1em;
+	font-weight: 300;
+	font-size: 1.8em;
+ }
+
+article h2, article h3 {
+	font-size: 1.8em;
+	font-weight: 700;
+	font-weight: 300;
+	font-size: 2.4em;
+	marginx: 1em 0 0em;
+}
+
+dt {
+	font-weight: 300;
+}
+
+/* 300, 400, 700 */
+	
+
