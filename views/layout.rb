@@ -6,7 +6,7 @@ class Basham
       include Models
 
       def passions
-        PASSIONS.randomList(60)
+        PASSIONS.randomList(90)
       end
 
       def adjective
