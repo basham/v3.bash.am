@@ -34,19 +34,17 @@
 
 <article>
 	
-{{#featured}}{{> portfolio_partial}}{{/featured}}
+{{#featuredProjects}}{{> portfolio_partial}}{{/featuredProjects}}
 
 	<p style="text-align: right"><a href="/portfolio">All portfolio projects&#187;</a></p>
 
 </article>
 
-<article class="labart">
+<article>
 
-<section class="items">
-{{#featured}}{{> lab_partial}}{{/featured}}
-{{#featured}}{{> lab_partial}}{{/featured}}
-{{#featured}}{{> lab_partial}}{{/featured}}
-</section>
+{{#featuredExperiments}}
+{{#section}}{{> lab_partial}}{{/section}}
+{{/featuredExperiments}}
 
 	<p style="text-align: right; clear: both"><a href="/lab">All lab experiments&#187;</a></p>
 	

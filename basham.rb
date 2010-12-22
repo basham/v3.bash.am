@@ -41,6 +41,15 @@ class Basham < Sinatra::Base
       mustache :portfolio_page
     end
   end
+  
+  EXPERIMENTS.each do |experiment|
+    get '/lab/' + experiment.slug + '/?' do
+      @project = experiment
+      @next = EXPERIMENTS.prev( experiment )
+      @prev = EXPERIMENTS.next( experiment )
+      mustache :lab_page
+    end
+  end
 
   not_found do
   	mustache :error404

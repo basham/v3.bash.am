@@ -5,8 +5,16 @@ class Basham
     class Layout < Mustache
       include Models
 
+      attr_reader :i, :n
+      attr_writer :i, :n
+   
+      def initialize
+        @i = 0
+        @n = 3
+      end
+      
       def passions
-        PASSIONS.randomList(90)
+        PASSIONS.randomList(85)
       end
 
       def adjective
@@ -69,6 +77,15 @@ class Basham
           s += ' ' + key + '="' + value.join(' ') + '"'
         end
         return s
+      end
+      
+      def section
+        @i += 1
+        lambda do |text|
+          a = ( @i % @n == 1 ) ? '<section class="labsec">' : ''
+          b = ( @i % @n == 0 ) ? '</section>' : ''
+          render(a + text + b)
+        end
       end
       
     end

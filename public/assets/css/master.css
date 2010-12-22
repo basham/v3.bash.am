@@ -303,8 +303,8 @@ footer li {
 	display: block;
 	margin-top: 4em; }
 	
-.feature aside h2 {
-	margin: 0 0 .35em; }
+.feature h2 {
+	margin: 0 0 .5em; }
 
 .feature figure {
 	clear: none;
@@ -359,6 +359,15 @@ img.typekit-badge {
 	text-transform: uppercase;
 	font-weight: bold;
 	margin: 0 0 1em; }
+
+section.labsec {
+	width: 980px;
+	margin-left: -340px; }
+
+section.labsec :last-child {
+	margin-right: 0; }
+
+
 
 .labart {
 	padding: 0;

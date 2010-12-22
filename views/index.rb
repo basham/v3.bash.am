@@ -10,8 +10,13 @@ class Basham
           #js.push({ :script => '/assets/js/jquery.twitterize.js' })
       end
     
-      def featured
+      def featuredProjects
         Models::PROJECTS.random
+      end
+      
+      # Acquire three uniquely random lab experiments
+      def featuredExperiments
+        [ Models::EXPERIMENTS.random(true), Models::EXPERIMENTS.random(true), Models::EXPERIMENTS.random(true) ]
       end
 
     end
