@@ -1,4 +1,6 @@
 
+/* 300, 400, 700 */
+
 html {
 	border-top: 7px solid; }
 	
@@ -8,41 +10,69 @@ body {
 	font-family: Georgia, serif;
 	border-top: 1px solid; }
 
-h1, h2, h3, h4 {
-	font-weight: normal;
-	margin: 2em 0 1em;
+h1, h2, h3 {
+	font-weight: 300;
+
 	font-family: HelveticaNeue-Light, 'Helvetica Neue Light', 'Helvetica Neue', Helvetica, arial, sans-serif; }
 
-h1 {
-	font-size: 5em; }
-
+article h1 {
+	line-height: 1;
+	font-size: 3.6em;
+	margin: 50px 0 20px; }
+	
 h2 {
-	font-size: 2.4em; }
+	font-size: 2.4em;
+	margin: 40px 0; }
 
 h3 {
-	font-size: 1.8em;
-	font-weight: bold; }
+	font-size: 2.4em;
+	font-weight: 700;
+	margin: 40px 0 0; }
 
 p, ol, ul, dt, dd {
-	font-size: 1.6em;
-	margin: 0 0 1.5em; }
+	font-size: 1.6em; }
 
-dl {
-	margin: 0 0 1.5em; }
+p, ol, ul, dl {
+	margin: 0 0 20px; }
 
+dt {
+	margin: 20px 0 0; }
+
+dt:first-child {
+	margin: 0; }
+	
 p {
 	text-indent: 1em; }
 
 aside p, .feature p {
 	text-indent: 0; }
 
-ol, ul {
+ol, ul, dd {
 	margin-left: 1em;
 	list-style-type: decimal; }
 
 ul {
 	list-style-type: disc; }
 
+dl ul {
+	font-size: 1em; }
+
+abbr {
+	border-bottom: 1px dotted; }
+
+blockquote {
+	margin: 2em 0; }
+
+blockquote p {
+	text-indent: 0;
+	font-size: 2.4em; }
+
+blockquote cite {
+	display: block;
+	margin: -1.5em 0 .5em;
+	font-size: 1.6em;
+	font-style: normal; }
+	
 a {
 	text-decoration: none; }
 /*
@@ -137,31 +167,6 @@ figure p {
 
 .figure-group.six figure {
 	width: 140px; }
-
-dl ul {
-	font-size: 1em; }
-
-dt {
-	margin: 1em 0 0; }
-
-dd {
-	margin: 0 0 0 1em; }
-
-abbr {
-	border-bottom: 1px dotted; }
-
-blockquote {
-	margin: 2em 0; }
-
-blockquote p {
-	text-indent: 0;
-	font-size: 2.4em; }
-
-blockquote cite {
-	display: block;
-	margin: -1.5em 0 .5em;
-	font-size: 1.6em;
-	font-style: normal; }
 	
 .hresume .description {
 	margin-left: 2em; }
@@ -173,7 +178,7 @@ blockquote cite {
 /*********
  * HEADER
  *********/
-	
+
 header section {
 	display: block;
 	padding: 5em 0 0 0; }
@@ -182,13 +187,16 @@ header h1 {
 	font-family: Georgia, serif;
 	float: left;
 	text-transform: lowercase;
-	margin: 0 0 0 -148px;
+	margin: 0 0 0 -158px;
 	font-size: 6em; }
+
+header h1 strong {
+	font-weight: 700; }
 
 header section hgroup {
 	float: left;
 	padding-left: 2em;
-	margin: 2.8em 0 0 2em; }
+	margin: 2.75em 0 0 2em; }
 
 header h2 {
 	margin: 0;
@@ -434,14 +442,17 @@ section.labsec :last-child {
 	background: url(/assets/i/esk-pre-640-bg.jpg) no-repeat; }
 
 .energy-safe-kids figure span.b {
+	background: url(/assets/i/esk-pre-640-ship.png) no-repeat 16% 180%;
 	-webkit-background-size: 200px;
 	-moz-background-size: 200px;
-	background: url(/assets/i/esk-pre-640-ship.png) no-repeat 16% 180%; }
+	background-size: 200px;
+ }
 
 .energy-safe-kids figure a:hover span.b {
+	background-position: 20% 100%; 
 	-webkit-background-size: 300px;
 	-moz-background-size: 300px;
-	background-position: 20% 100%; }
+	background-size: 300px; }
 
 
 
@@ -466,7 +477,8 @@ section.labsec :last-child {
 	background: url(/assets/i/ping-pre-hand.png) no-repeat; }
 
 .ping-platform figure a:hover span.b {
-	-webkit-transform: translate(100px, 0); }
+	-webkit-transform: translate(100px, 0);
+	-moz-transform: translate(100px, 0); }
 
 .ping-platform figure span.c {
 	width: 70px;
@@ -474,11 +486,14 @@ section.labsec :last-child {
 	left: 400px;
 	top: 110px;
 	background: url(/assets/i/ping-pre-hand.png) no-repeat 0 -90px;
-	-webkit-transition-delay: .05s; }
+	-webkit-transition-delay: .05s;
+	-moz-transition-delay: .05s; }
 
 .ping-platform figure a:hover span.c {
 	-webkit-transition-delay: .05s;
-	-webkit-transform: translate(100px, 0); }
+	-webkit-transform: translate(100px, 0);
+	-moz-transition-delay: .05s;
+	-moz-transform: translate(100px, 0); }
 
 
 .daybreak figure span.a {
@@ -545,30 +560,4 @@ section.labsec :last-child {
 	background: #F5F5F5;
 	border-radius: 5px;
 }
-
-article h1 {
-	margin: 1em 0 0;
-	font-size: 3.6em;
-	font-weight: 300; }
-
-article h2x {
-	margin-topx: 1em;
-	font-weight: 300;
-	font-size: 1.8em;
- }
-
-article h2, article h3 {
-	font-size: 1.8em;
-	font-weight: 700;
-	font-weight: 300;
-	font-size: 2.4em;
-	marginx: 1em 0 0em;
-}
-
-dt {
-	font-weight: 300;
-}
-
-/* 300, 400, 700 */
-	
 
