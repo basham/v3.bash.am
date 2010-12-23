@@ -116,7 +116,6 @@ article {
 	margin-bottom: 4em; }
 
 figure {
-	clear: both;
 	margin: 0 0 3em;
 	position: relative;
 	float: left;
@@ -139,6 +138,12 @@ figure.caption {
 	-webkit-border-bottom-right-radius: 5px;
 	-moz-border-radius: 0 0 5px 5px;
 	border-radius: 0 0 5px 5px; }
+
+aside figure.caption {
+	width: 300px; }
+
+aside dl {
+	margin-bottom: 40px; }
 
 figure.aside {
 	margin: 0 40px 20px -340px;
@@ -388,7 +393,8 @@ section.labsec :last-child {
 	margin-right: 40px; }
 
 .feature.lab figure {
-	height: 150px; }
+	height: 150px;
+	margin: 0 0 20px; }
 
 .feature.lab figure a {
 	display: block;

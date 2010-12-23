@@ -26,7 +26,7 @@ class Basham
       Project.new( 'Daybreak', '<a href="http://daybreak.bash.am">Daybreak</a> is a collaborative design experiment with <a href="http://www.tonydewan.com/">Tony Dewan</a> as a submission to the <a href="http://www.csszengarden.com/">CSS Zen Garden</a> project. Tony produced the graphics and aesthetic of the piece, while I coded the CSS and solved technical roadblocks.' ) ]
 
     EXPERIMENTS = [
-      Project.new( 'Pirate boat', '...' ),
+      Project.new( 'Pirate boat', 'The pirate boat is an exploration into prototyping form with florist foam.' ),
       Project.new( 'Bronze Mark II Viper', '...' ),
       Project.new( 'IR Wind Chime', '...' ),
       Project.new( 'Cricket bat v2', '...' ),
