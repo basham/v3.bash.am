@@ -60,7 +60,7 @@ abbr {
 	
 h1, h2, h3, dt, header a:link, header a:visited {
 	color: rgba(0, 0, 0, .8); }
-	
+
 header h1 a:hover {
 	color: #000000;
 	background-color: transparent; }

@@ -16,9 +16,10 @@ h1, h2, h3 {
 	font-family: HelveticaNeue-Light, 'Helvetica Neue Light', 'Helvetica Neue', Helvetica, arial, sans-serif; }
 
 article h1 {
+	clear: both;
 	line-height: 1;
 	font-size: 3.6em;
-	margin: 50px 0 20px; }
+	margin: 40px 0 20px; }
 	
 h2 {
 	font-size: 2.4em;
@@ -27,7 +28,7 @@ h2 {
 h3 {
 	font-size: 2.4em;
 	font-weight: 700;
-	margin: 40px 0 0; }
+	margin: 30px 0 0; }
 
 p, ol, ul, dt, dd {
 	font-size: 1.6em; }
@@ -96,7 +97,7 @@ hgroup {
 	display: block; }
 
 article aside {
-	margin: 0 40px 4em -340px;
+	margin: 40px 40px 20px -340px;
 	float: left;
 	display: block;
 	width: 300px; }
@@ -140,8 +141,8 @@ figure.caption {
 	border-radius: 0 0 5px 5px; }
 
 figure.aside {
-	margin: 0 4em 4em -320px;
-	width: 280px; }
+	margin: 0 40px 20px -340px;
+	width: 300px; }
 
 figure p {
 	font-size: 1.4em;
@@ -152,20 +153,14 @@ figure p {
 	float: left;
 	display: block;
 	width: 980px;
-	margin: 0 0 3em -340px;
+	margin: 0 0 20px -340px;
 	border: 1px solid;
 	border-width: 1px 0; }
 	
 .figure-group figure {
 	padding: 0;
 	clear: none;
-	margin: 2em 0 1.5em 2em;
-	width: 220px; }
-
-.figure-group figure:first-child {
-	margin-left: 1em; }
-
-.figure-group.six figure {
+	margin: 20px 0 14px 20px;
 	width: 140px; }
 	
 .hresume .description {
@@ -220,7 +215,7 @@ nav li a {
 
 article nav {
 	float: left;
-	margin: 0 0 0 -320px; }
+	margin: 0 0 0 -340px; }
 	
 article nav li {
 	float: left;
@@ -229,7 +224,7 @@ article nav li {
 	border-left: 1px solid; }
 
 article nav li:first-child {
-	width: 200px;
+	width: 220px;
 	border-width: 0;
 	text-align: right; }
 
@@ -445,8 +440,7 @@ section.labsec :last-child {
 	background: url(/assets/i/esk-pre-640-ship.png) no-repeat 16% 180%;
 	-webkit-background-size: 200px;
 	-moz-background-size: 200px;
-	background-size: 200px;
- }
+	background-size: 200px; }
 
 .energy-safe-kids figure a:hover span.b {
 	background-position: 20% 100%; 
