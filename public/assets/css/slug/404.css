@@ -2,7 +2,7 @@
 article {
 	margin-bottom: 0;
 	padding-bottom: 4em;
-	background: transparent url(/assets/i/404-bg.jpg) no-repeat bottom left; }
-
+	background: transparent url(/assets/i/404-bg.jpg) no-repeat 0 50%; }
+	
 h2 {
 	margin-bottom: 0; }
