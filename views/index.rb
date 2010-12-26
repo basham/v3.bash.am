@@ -14,9 +14,8 @@ class Basham
         Models::PROJECTS.random
       end
       
-      # Acquire three uniquely random lab experiments
       def featuredExperiments
-        [ Models::EXPERIMENTS.random(true), Models::EXPERIMENTS.random(true), Models::EXPERIMENTS.random(true) ]
+        Models::EXPERIMENTS.randomCollection(3)
       end
 
     end

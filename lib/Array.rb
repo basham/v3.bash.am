@@ -31,17 +31,31 @@ class Array
     return remove ? self.delete_at(r) : self[r]
   end
   
-  def randomList( maxChars = 100 )
-    sum = 0
+  def randomCollection( n = 0 )
+    i = 0
     a = []
     f = (0...self.size).to_a # Array of self's indexes
+    n = n > f.length || n == 0 ? f.length : n
+    
+    while i < n
+      a.push( self[ f.random(true) ] ) # Randomly retrieve an el and remove potential to be retrieved again
+      i += 1
+    end
+    
+    return a
+  end
+  
+  def randomList( maxChars = 100 )
+    sum = 0
+    r = self.randomCollection
+    a = []
     delimiter = ', '
     conjunction = ' and '
 
     maxChars -= conjunction.length
 
-    while f.length > 0 # Stop when possibles end
-      el = self[ f.random(true) ] # Randomly retrieve an el and remove potential to be retrieved again
+    while r.length > 0 # Stop when possibles end
+      el = r.pop # Retrieve a randomized el and remove potential to be retrieved again
       if sum + el.stripMarkup.length < maxChars # Tests if new el is within char limit
         sum += el.stripMarkup.length
         maxChars -= delimiter.length
