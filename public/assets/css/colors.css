@@ -35,7 +35,7 @@ html {
 body {
 	border-color: rgba(25, 60, 112, .9); }
 
-header section hgroup, article, article nav li, article aside,
+header section hgroup, article, article nav li.next, article aside,
 footer section, footer aside, .figure-group {
 	border-color: rgba(0, 0, 0, .1); }
 

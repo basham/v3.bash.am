@@ -2,4 +2,10 @@
 
 {{#project}}{{/project}}
 
-{{> portfolio_nav}}
+	<nav>
+		<ul>
+			<li class="prev">&nbsp;{{#prev}}<a href="/portfolio/{{slug}}" title="{{title}}">&#171;Previous</a>{{/prev}}</li>
+			<li class="next">{{#next}}<a href="/portfolio/{{slug}}" title="{{title}}">Next&#187;</a>{{/next}}&nbsp;</li>
+			<li class="all"><a href="/portfolio">All portfolio projects&#187;</a></li>
+		</ul>
+	</nav>
