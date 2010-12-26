@@ -132,12 +132,27 @@ figure a:hover img {
 
 figure.caption {
 	width: 640px;
-	padding: 1px;
+	padding: 0px;
 	text-shadow: none;
 	-webkit-border-bottom-left-radius: 5px;
 	-webkit-border-bottom-right-radius: 5px;
 	-moz-border-radius: 0 0 5px 5px;
 	border-radius: 0 0 5px 5px; }
+
+figure.caption strong:before {
+	content: "Figure "; }
+	
+figure.caption strong:after {
+	content: ":"; }
+
+sup {
+	font-size: 75%;
+	vertical-align: super;
+	color: #FFF;
+	font-weight: 700;
+	background-color: rgba(0, 0, 0, .8);
+	border-radius: 8px;
+	padding: 0 4px; }
 
 aside figure.caption {
 	width: 300px; }
@@ -158,16 +173,26 @@ figure p {
 	float: left;
 	display: block;
 	width: 980px;
-	margin: 0 0 20px -340px;
-	border: 1px solid;
-	border-width: 1px 0; }
-	
-.figure-group figure {
+	margin: 0 0 20px -340px; }
+
+.figure-group.two {
+	width: 640px;
+	margin-left: 0; }
+
+.figure-group.two figure, .figure-group.three figure {
+	clear: none;
+	margin: 20px 0 20px 40px;
+	width: 300px; }
+
+.figure-group.two figure:first-child, .figure-group.three figure:first-child {
+	margin-left: 0; }
+
+.figure-group.six figure {
 	padding: 0;
 	clear: none;
 	margin: 20px 0 14px 20px;
 	width: 140px; }
-	
+
 .hresume .description {
 	margin-left: 2em; }
 
