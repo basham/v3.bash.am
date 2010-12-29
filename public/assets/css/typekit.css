@@ -2,5 +2,5 @@
 body, header h1 {
 	font-family: "droid-serif-1","droid-serif-2", Georgia, serif; }
 
-h1, h2, h3, h4, blockquote cite, figure.caption strong, sup {
+h1, h2, h3, h4, dt, blockquote cite, figure.caption strong, sup {
 	font-family: "camingodos-web-1","camingodos-web-2", HelveticaNeue-Light, 'Helvetica Neue Light', 'Helvetica Neue', Helvetica, arial, sans-serif; }

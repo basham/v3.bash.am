@@ -37,6 +37,7 @@ p, ol, ul, dl {
 	margin: 0 0 20px; }
 
 dt {
+	font-size: 1.8em;
 	margin: 20px 0 0; }
 
 dt:first-child {
@@ -52,6 +53,10 @@ ol, ul, dd {
 	margin-left: 1em;
 	list-style-type: decimal; }
 
+dd {
+	text-indent: -1em;
+	margin-left: 2em; }
+	
 ul {
 	list-style-type: disc; }
 
@@ -193,11 +198,18 @@ figure p {
 	margin: 20px 0 14px 20px;
 	width: 140px; }
 
+
+.hresume .summary abbr {
+	border-width: 0; }
+	
+.hresume .location {
+	font-variant: small-caps; }
+
 .hresume .description {
-	margin-left: 2em; }
+	text-indent: 0; }
 
 .hresume .description ul {
-	margin-left: 0em; }
+	margin-left: 0; }
 
 
 /*********

@@ -26,7 +26,7 @@ class Basham
 
     EXPERIMENTS = [
       Project.new( 'Pirate boat', 'Exploration into prototyping form with florist foam.' ),
-      Project.new( 'Keynote SLAM', 'Rapid prototyping with Keynote.' ),
+      Project.new( 'Keynote SLAM', 'Interactive prototyping with Keynote.' ),
       Project.new( 'Pencil sharpener sketch', 'Experimentation of industrial sketching techniques.' ),
       Project.new( 'Daybreak', 'Submission to the <a href="http://www.csszengarden.com/">CSS Zen Garden</a> project.' ) ]
       #Project.new( 'Bronze Mark II Viper', '...' ),
