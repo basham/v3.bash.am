@@ -474,9 +474,6 @@ section.labsec :last-child {
 	height: 160px;
 	left: 65px;
 	top: 130px;
-	-webkit-transform: rotate(-10deg);
-	-moz-transform: rotate(-10deg);
-	transform: rotate(-10deg);
 	background: url(/assets/i/pirate-navigator-fg.png) no-repeat 0 0; }
 
 /* Gray background water */
@@ -498,9 +495,9 @@ section.labsec :last-child {
 .pirate-navigator figure a:hover span.d {
 	left: 230px;
 	top: 125px;
-	-webkit-transform: rotate(-20deg);
-	-moz-transform: rotate(-20deg);
-	transform: rotate(-20deg); }
+	-webkit-transform: rotate(-10deg);
+	-moz-transform: rotate(-10deg);
+	transform: rotate(-10deg); }
 	
 .pirate-navigator figure a:hover span.e {
 	background-position: -180px -160px; }
