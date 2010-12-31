@@ -30,3 +30,7 @@ a:hover, header a:hover {
 a:hover, a:active {
 	background-color: #F1E4EA;
 	background-color: rgba(218, 75, 59, .1); }
+
+figure a:hover img {
+	border-color: #AC4540;
+	border-color: rgba(164, 50, 44, .9); }
