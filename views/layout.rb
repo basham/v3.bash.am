@@ -14,7 +14,7 @@ class Basham
       end
       
       def passions
-        PASSIONS.randomList(85)
+        PASSIONS.randomList(80)
       end
 
       def adjective

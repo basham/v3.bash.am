@@ -460,44 +460,52 @@ section.labsec :last-child {
 .pirate-navigator figure a:hover span.b {
 	opacity: 0; }
 
-/* Pirate boat */
+/* Pale horizon water */
 .pirate-navigator figure span.c {
+	width: 640px;
+	height: 55px;
+	left: 0;
+	top: 265px;
+ 	background-color: #666666;}
+	
+/* Pirate boat */
+.pirate-navigator figure span.d {
 	width: 170px;
 	height: 160px;
-	left: 60px;
-	top: 125px;
-	-webkit-transform: rotate(-5deg);
-	-moz-transform: rotate(-5deg);
-	transform: rotate(-5deg);
+	left: 65px;
+	top: 130px;
+	-webkit-transform: rotate(-10deg);
+	-moz-transform: rotate(-10deg);
+	transform: rotate(-10deg);
 	background: url(/assets/i/pirate-navigator-fg.png) no-repeat 0 0; }
 
 /* Gray background water */
-.pirate-navigator figure span.d {
-	width: 640px;
-	height: 70px;
-	left: 0;
-	top: 245px;
-	background: url(/assets/i/pirate-navigator-fg.png) no-repeat -100px -160px; }
-	
-/* Black foreground water */
 .pirate-navigator figure span.e {
 	width: 640px;
 	height: 70px;
 	left: 0;
+	top: 245px;
+	background: url(/assets/i/pirate-navigator-fg.png) no-repeat -140px -160px; }
+	
+/* Black foreground water */
+.pirate-navigator figure span.f {
+	width: 640px;
+	height: 70px;
+	left: 0;
 	top: 250px;
-	background: url(/assets/i/pirate-navigator-fg.png) no-repeat 0 -230px; }
+	background: url(/assets/i/pirate-navigator-fg.png) no-repeat -125px -230px; }
 
-.pirate-navigator figure a:hover span.c {
-	left: 340px;
-	top: 140px;
+.pirate-navigator figure a:hover span.d {
+	left: 230px;
+	top: 125px;
 	-webkit-transform: rotate(-20deg);
 	-moz-transform: rotate(-20deg);
 	transform: rotate(-20deg); }
 	
-.pirate-navigator figure a:hover span.d {
-	background-position: -250px -160px; }
-
 .pirate-navigator figure a:hover span.e {
+	background-position: -180px -160px; }
+
+.pirate-navigator figure a:hover span.f {
 	background-position: -275px -230px; }
 
 
