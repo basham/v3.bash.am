@@ -451,6 +451,58 @@ section.labsec :last-child {
 
 
 
+.pirate-navigator figure span.a {
+	background: url(/assets/i/pirate-navigator-bg.jpg) no-repeat 0 -320px; }
+
+.pirate-navigator figure span.b {
+	background: url(/assets/i/pirate-navigator-bg.jpg) no-repeat; }
+	
+.pirate-navigator figure a:hover span.b {
+	opacity: 0; }
+
+/* Pirate boat */
+.pirate-navigator figure span.c {
+	width: 170px;
+	height: 160px;
+	left: 60px;
+	top: 125px;
+	-webkit-transform: rotate(-5deg);
+	-moz-transform: rotate(-5deg);
+	transform: rotate(-5deg);
+	background: url(/assets/i/pirate-navigator-fg.png) no-repeat 0 0; }
+
+/* Gray background water */
+.pirate-navigator figure span.d {
+	width: 640px;
+	height: 70px;
+	left: 0;
+	top: 245px;
+	background: url(/assets/i/pirate-navigator-fg.png) no-repeat -100px -160px; }
+	
+/* Black foreground water */
+.pirate-navigator figure span.e {
+	width: 640px;
+	height: 70px;
+	left: 0;
+	top: 250px;
+	background: url(/assets/i/pirate-navigator-fg.png) no-repeat 0 -230px; }
+
+.pirate-navigator figure a:hover span.c {
+	left: 340px;
+	top: 140px;
+	-webkit-transform: rotate(-20deg);
+	-moz-transform: rotate(-20deg);
+	transform: rotate(-20deg); }
+	
+.pirate-navigator figure a:hover span.d {
+	background-position: -250px -160px; }
+
+.pirate-navigator figure a:hover span.e {
+	background-position: -275px -230px; }
+
+
+	
+	
 .zygomote figure span.a {
 	background: url(/assets/i/zygomote-pre-640.jpg) no-repeat; }
 
@@ -484,9 +536,9 @@ section.labsec :last-child {
 
 .energy-safe-kids figure span.b {
 	background: url(/assets/i/esk-pre-640-ship.png) no-repeat 16% 180%;
-	-webkit-background-size: 200px;
-	-moz-background-size: 200px;
-	background-size: 200px; }
+	-webkit-background-size: 225px;
+	-moz-background-size: 225px;
+	background-size: 225px; }
 
 .energy-safe-kids figure a:hover span.b {
 	background-position: 20% 100%; 
@@ -543,16 +595,6 @@ section.labsec :last-child {
 	background: url(http://daybreak.bash.am/images/tree.png) no-repeat 200px 40px; }
 
 .daybreak figure a:hover span.a {
-	background-position: 0 0; }
-
-
-.pirate-navigator figure span.a {
-	background: url(/assets/i/daybreak-pre-640a.jpg) no-repeat 0 -1400px; }
-
-.pirate-navigator figure span.b {
-	background: url(http://daybreak.bash.am/images/tree.png) no-repeat 200px 40px; }
-
-.pirate-navigator figure a:hover span.a {
 	background-position: 0 0; }
 
 
