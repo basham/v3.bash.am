@@ -28,7 +28,7 @@ class Basham
       Project.new( 'Pirate boat', 'Exploration into prototyping form with florist foam.' ),
       Project.new( 'Keynote SLAM', 'Interactive prototyping with Keynote.' ),
       Project.new( 'Pencil sharpener sketch', 'Experimentation of industrial sketching techniques.' ),
-      Project.new( 'Bronze Mark II Viper', 'Modeling a <abbr title="Battlestar Galactica">BSG</abbr> space fighter in bronze.' ),
+      Project.new( 'Bronze Viper Mark II', 'Modeling a <abbr title="Battlestar Galactica">BSG</abbr> space fighter in bronze.' ),
       Project.new( 'Daybreak', 'Submission to the <a href="http://www.csszengarden.com/">CSS Zen Garden</a> project.' ) ]
       #Project.new( 'IR Wind Chime', '...' ),
       #Project.new( 'Cricket bat v2', '...' ),
