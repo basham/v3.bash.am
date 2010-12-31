@@ -1,18 +1,32 @@
+/*
+
+rgba(218, 75, 59, .8)
+#DE6C61
+
+Red link color
+rgba(218, 75, 59, .9)
+#DC5B4D
+
+*/
 
 html {
+	border-color: #DE6C61;
 	border-color: rgba(218, 75, 59, .8); }
 	
 body {
 	text-shadow: rgba(100%, 100%, 100%, .8) 0 1px 0;
+	border-color: #DC5B4D;
 	border-color: rgba(218, 75, 59, .9);
 	background: rgb(174, 207, 233) url(/assets/i/waterwall-bg.png) repeat-x 50% -250px; }
 
 a:link, a:visited {
+	color: #DC5B4D;
 	color: rgba(218, 75, 59, .9); }
 
 a:hover, header a:hover {
+	color: #AC4540;
 	color: rgba(164, 50, 44, .9); }
 	
 a:hover, a:active {
+	background-color: #F1E4EA;
 	background-color: rgba(218, 75, 59, .1); }
-	
