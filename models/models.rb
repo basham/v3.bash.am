@@ -74,7 +74,9 @@ class Basham
     	'movies',
     	'pens',
     	'mind mapping']
-    	
+    
+    PASSIONS_MAX_CHARS = 80
+    
   	ADJECTIVES = [
     	'intelligent',
     	'radical',
