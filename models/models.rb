@@ -38,7 +38,9 @@ class Basham
       #Project.new( 'Conductive gloves', '...' ) ]
     
     STATIC = [ '', 'portfolio', 'lab', 'resume', 'about', 'colophon' ]
-    
+
+    PLAIN = [ 'inventables' ]
+      
     # http://microformats.org/wiki/profile-uris
     MF_PROFILES = {
       :hcalendar => 'http://microformats.org/profile/hcalendar',

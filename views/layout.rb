@@ -2,7 +2,7 @@ require 'models/models'
 
 class Basham
   module Views
-    class Layout < Mustache
+    class Layout < Plain
       include Models
 
       attr_reader :i, :n
@@ -20,28 +20,11 @@ class Basham
       def adjective
         ADJECTIVES.random
       end
-      
-      def title
-        @title
-      end
   
       def smartTitle
         (!defined? title) || title.empty? ? TITLE : title + ' | ' + TITLE
       end
-  
-      def css
-        @css
-      end
-  
-      def smartCSS
-        url = '/assets/css/slug/' + ( css || @slug ) + '.css'
-        File.exists?( 'public' + url ) ? url : false
-      end
-      
-      def year
-        Time.now.year
-      end
-  
+
       def formats
         mfd = Models::MF_DEFAULT
         if defined? mf then

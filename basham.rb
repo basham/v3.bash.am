@@ -7,6 +7,7 @@ require 'lib/String'
 class Basham < Sinatra::Base
   
   register Mustache::Sinatra
+  require 'views/plain'
   require 'views/layout'
   require 'models/models'
   include Models
@@ -30,6 +31,12 @@ class Basham < Sinatra::Base
   STATIC.each do |path|
     get '/' + path + '/?' do
       mustache ( path.empty? ? :index : path )
+    end
+  end
+
+  PLAIN.each do |path|
+    get '/' + path + '/?' do
+      mustache ( path, { :layout => :plain } )
     end
   end
 

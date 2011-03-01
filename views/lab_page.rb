@@ -3,7 +3,7 @@ class Basham
     class LabPage < Layout
       
       def initialize
-        self.class.path = 'templates/lab/'
+        #self.class.path = 'templates/lab/'
       end
 
       def title
@@ -20,7 +20,7 @@ class Basham
       
       # Dynamically sets the partial to the appropriate portfolio project
       def project
-        lambda { |text| render( '{{> ' + slug + '}}' ) }
+        lambda { |text| render( '{{> lab/' + slug + '}}' ) }
       end
 
       def prev
