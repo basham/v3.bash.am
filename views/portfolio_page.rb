@@ -31,6 +31,10 @@ class Basham
         @next
       end
       
+      def jquery
+        true
+      end
+      
     end
   end
 end
