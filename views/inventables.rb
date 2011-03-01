@@ -3,7 +3,7 @@ class Basham
     class Inventables < Plain
 
       def title
-        'Hi, Inventables'
+        'Hi, Inventables!'
       end
       
     end
