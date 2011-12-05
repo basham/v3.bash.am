@@ -50,7 +50,7 @@ class Array
     r = self.randomCollection
     a = []
     delimiter = ', '
-    conjunction = ' and '
+    conjunction = ' &amp; '
 
     maxChars -= conjunction.length
 

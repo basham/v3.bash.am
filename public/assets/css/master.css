@@ -7,12 +7,11 @@ html {
 body {
 	font-size: 62.5%;
 	line-height: 1.6;
-	font-family: Georgia, serif;
+	font-family: sans-serif;
 	border-top: 1px solid; }
 
-h1, h2, h3 {
-	font-weight: 300;
-	font-family: HelveticaNeue-Light, 'Helvetica Neue Light', 'Helvetica Neue', Helvetica, arial, sans-serif; }
+h1, h2 {
+	font-weight: 300; }
 
 article h1 {
 	clear: both;
@@ -37,13 +36,11 @@ p, ol, ul, dl {
 
 dt {
 	font-size: 1.8em;
-	margin: 20px 0 0; }
+	margin: 20px 0 0;
+	font-variant: small-caps; }
 
 dt:first-child {
 	margin: 0; }
-	
-p {
-	text-indent: 1em; }
 
 aside p, .feature p {
 	text-indent: 0; }
@@ -80,18 +77,10 @@ blockquote cite {
 	
 a {
 	text-decoration: none; }
-/*
-p a {
-	text-decoration: underline; }
-*/
 	
 a, a span, a img {
 	-webkit-transition: all .2s ease-out;
 	-moz-transition: opacity .2s ease-out; }
-
-span.amp {
-	font-family: Georgia;
-	font-style: italic; }
 
 .col3 {
 	float: left;
@@ -200,9 +189,6 @@ figure p {
 
 .hresume .summary abbr {
 	border-width: 0; }
-	
-.hresume .location {
-	font-variant: small-caps; }
 
 .hresume .description {
 	text-indent: 0; }
@@ -217,14 +203,14 @@ figure p {
 
 header section {
 	display: block;
-	padding: 5em 0 0 0; }
+	padding: 6em 0 0 0; }
 
 header h1 {
-	font-family: Georgia, serif;
+	line-height: 1;
 	float: left;
 	text-transform: lowercase;
-	margin: 0 0 0 -158px;
-	font-size: 6em; }
+	margin: 0 0 8px -164px;
+	font-size: 6.5em; }
 
 header h1 strong {
 	font-weight: 700; }
@@ -232,7 +218,7 @@ header h1 strong {
 header section hgroup {
 	float: left;
 	padding-left: 2em;
-	margin: 2.75em 0 0 2em; }
+	margin: .75em 0 0 2em; }
 
 header h2 {
 	margin: 0;
@@ -607,7 +593,7 @@ section.labsec :last-child {
 
 
 .button {
-	padding: .5em 1em;
+	padding: .75em 1em .5em;
 	background-color: rgba(0, 0, 0, .1);
 	border: 1px solid rgba(0, 0, 0, .2);
 	-webkit-border-radius: 5px;

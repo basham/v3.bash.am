@@ -18,7 +18,7 @@ class Basham
     end
     
     PROJECTS = [
-      Project.new( 'Pirate Navigator', 'Pirate Navigator is a museum exhibit prototype engaging participants in 17th Century navigational techniques.' ),
+      Project.new( 'Pirate Navigator', 'Pirate Navigator is a museum exhibit prototype, engaging participants in 17th Century navigational techniques.' ),
       Project.new( 'Zygomote', 'Zygomote is an iPhone application encouraging users to walk more regularly, as a submission to the <a href="http://www.chi2010.org/">CHI 2010</a> <a href="http://www.chi2010.org/authors/cfp-sdc.html">Student Design Competition</a>.' ),
       Project.new( 'Energy Safe Kids', '<a href="http://www.vectrenenergysafe.com">Energy Safe Kids</a> is a micro-site sponsored by <a href="http://www.vectren.com">Vectren Corp</a> to promote and educate natural gas and electricity safety to elementary students.' ),
       Project.new( 'Waterwall', '<a href="http://waterwall.org">Waterwall</a> is a project that explores technology\'s place in public spaces, particularly as a tool for fostering new kinds of interactions. It\'s an interactive art installation where the body\'s motion and presence are the main input mechanism.' ),
@@ -63,7 +63,6 @@ class Basham
     	'grammar',
     	'word&shy;smithing',
     	'blueberry muffins',
-    	'God',
     	'graphic novels',
     	'sci-fi',
     	'disc golf',
@@ -77,7 +76,7 @@ class Basham
     	'pens',
     	'mind mapping']
     
-    PASSIONS_MAX_CHARS = 80
+    PASSIONS_MAX_CHARS = 75
     
   	ADJECTIVES = [
     	'intelligent',
