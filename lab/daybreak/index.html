@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+	<title>Daybreak | Chris Basham</title>
+	
+	<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+	<meta name="robots" content="follow, all" />
+	<meta name="copyright" content="Copyright &copy; 2007-2013 Chris Basham" />
+	<meta name="author" content="Chris Basham" />
+	<meta name="keywords" content="chris basham human computer interaction design portfolio website development indiana university bloomington hci hcid" />
+	<meta name="description" content="Chris Basham is a UX designer pursuing a masters in HCI/d at Indiana University." />
+	
+	<link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
+	<link rel="icon" href="/favicon.ico" type="image/x-icon">
+	
+	<link rel="profile" href="http://microformats.org/profile/hcard" />
+	<link rel="profile" href="http://microformats.org/profile/rel-license" />
+	<link rel="profile" href="http://gmpg.org/xfn/11" />
+	<link rel="profile" href="http://microformats.org/profile/hresume" />
+	<link rel="profile" href="http://microformats.org/profile/hcalendar" />
+	<link rel="profile" href="http://microformats.org/profile/rel-tag" />
+	<link rel="profile" href="http://microformats.org/profile/hresume" />
+	<link rel="profile" href="http://microformats.org/profile/hcalendar" />
+	<link rel="profile" href="http://microformats.org/profile/rel-tag" />
+	<link rel="profile" href="http://microformats.org/profile/hresume" />
+	<link rel="profile" href="http://microformats.org/profile/hcalendar" />
+	<link rel="profile" href="http://microformats.org/profile/rel-tag" />
+	<link rel="profile" href="http://microformats.org/profile/hresume" />
+	<link rel="profile" href="http://microformats.org/profile/hcalendar" />
+	<link rel="profile" href="http://microformats.org/profile/rel-tag" />
+	<link rel="stylesheet" href="/assets/css/main.css" type="text/css" media="screen" />
+	<script type="text/javascript" src="http://use.typekit.com/oim8zsd.js"></script>
+	<script type="text/javascript">try{Typekit.load();}catch(e){}</script>
+	<!-- Should make IE recognize HTML5 elements -->
+	<!--[if IE]>
+	<script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+	<![endif]-->
+	</head>
+
+<body>
+
+<header>
+	<section>
+		<h1><a href="/">Chris <strong>Basham</strong></a></h1>
+		<hgroup>
+			<h2>User experience designer.</h2>
+			<h2>Prototyper. Developer.</h2>
+		</hgroup>
+	</section>
+	<nav>
+		<ul>
+			<li><a href="/">Home</a></li>
+			<li><a href="/portfolio">Portfolio</a></li>
+			<li><a href="/lab">Lab</a></li>
+			<li><a href="/resume">Resume</a></li>
+			<li><a href="/about">About</a></li>
+		</ul>
+	</nav>
+</header>
+
+<article>
+
+	<h1>Daybreak</h1>
+
+	<aside>
+		<dl>
+			<dt>Timeframe</dt>
+			<dd>December 2007</dd>
+			<dt>Role</dt>
+			<dd>CSS development</dd>
+			<dt>Team</dt>
+			<dd><a href="http://tonydewan.com" rel="friend met colleague">Tony Dewan</a></dd>
+			<dt>Visit</dt>
+			<dd><a href="http://daybreak.bash.am">http://daybreak.bash.am</a></dd>
+		</dl>
+	</aside>
+	
+	<h2>Submission to the <a href="http://www.csszengarden.com/">CSS Zen Garden</a> project.</h2>
+
+	<figure>
+		<a href="http://daybreak.bash.am"><img src="/assets/i/daybreak-640.jpg" width="640" height="320" alt="Daybreak" /></a>
+	</figure>
+	
+	<h3>Concept</h3>
+	<p>After reviewing the CSS Zen Garden's <a href="http://www.mezzoblue.com/zengarden/alldesigns/">official designs</a>, partner <a href="http://tonydewan.com" rel="friend met colleague">Tony Dewan</a> and I quickly discovered a trend in the submissions: They were chosen due to <a title="Dazzling Beauty by Deny Sri Supriyono" href="http://www.csszengarden.com/?cssfile=195/195.css">design aesthetics</a> or <a title="Retro Theater by Eric Rogé" href="http://www.csszengarden.com/?cssfile=202/202.css">technical complexity</a>. For our experiment, we didn't want to force ourselves into either category, so we spent considerable time on both  strategies.</p>
+	<figure class="caption aside">
+		<img src="/assets/i/daybreak-01-300.jpg" alt="Full page screenshot" />
+		<p><strong>1</strong> As the page scrolls toward the bottom of the screen, the sun dawns revealing additional navigation.</p>
+	</figure>
+	<p>Early in the conceptual stage, we wanted to tell a story as the user interacts with the design while scrolling the page. Since it is a relatable experience, the transition from night to day would provide a compelling narrative and strong visual elements.<sup>1</sup> The moon and sun respectively establish the night and day; and a sky assists the transition between the two. In order to ground the world against the scrolling moon, sun and sky, a blooming tree serves as a natural, strong and enduring visual anchor.</p>
+	
+	<h3>Technical roadblocks</h3>
+	<p>To technically achieve a smooth transition from the spectrum of cool to warm colors while overlaying a visually complex tree element, the tree would need to be created as a 24-bit PNG image. (24-bit includes an alpha channel, rather than merely a "transparent" pixel, like 8-bit PNG and GIF.) Since this image type is not compatible with all older browsers and JavaScript is not permitted for this submission, transparent GIF versions were provided for graceful degradation.<sup>2</sup></p>
+	<figure class="caption">
+		<img src="/assets/i/daybreak-02-640.jpg" alt="Alternative graphics and CSS for IE6" />
+		<p><strong>2</strong> Graphics and CSS gracefully degrade for Internet Explorer 6.</p>
+	</figure>
+	<p>As another roadblock, Internet Explorer 6 cannot fix elements to the bottom of the viewport via CSS. Alternatively, we produced a different but aesthetically similar visual anchor and affixed it to the top of the page. This new image places the user <em>underneath</em> the tree, seeming as if selected branches hang low in the top of the user's peripheral vision.</p>	
+<nav>
+		<ul>
+			<li class="prev">&nbsp;</li>
+			<li class="next"><a href="/lab/bronze-viper-mark-ii" title="Bronze Viper Mark II">Next&#187;</a>&nbsp;</li>
+			<li class="all"><a href="/lab">All lab experiments&#187;</a></li>
+		</ul>
+	</nav>
+
+</article>
+
+<footer>
+	<section class="contact vcard">
+		<aside id="elsewhere">
+			<ul>
+				<li><a href="http://twitter.com/chrisbasham" rel="me" class="twitter"><span></span>Follow me on Twitter</a></li>
+			</ul>
+			<ul class="icons">
+				<li><a href="https://plus.google.com/u/0/102219125000972964214/" rel="me" class="googleplus">Google+</a></li>
+				<li><a href="http://www.flickr.com/photos/chrisbasham" rel="me" class="flickr">Flickr</a></li>
+				<li><a href="http://www.linkedin.com/in/cbasham" rel="me" class="linkedin">LinkedIn</a></li>
+				<li><a href="http://vimeo.com/basham" rel="me" class="vimeo">Vimeo</a></li>
+			</ul>
+		</aside>
+		<aside>
+			<ul>
+				<li class="tel">812 459 9891</li>
+				<li><a href="mailto:chris@bash.am" class="email">chris@bash.am</a></li>
+				<li><a type="text/directory" href="http://dev.h2vx.com/vcf/bash.am">Download vCard</a></li>
+			</ul>
+			<ul>
+				<li><a href="http://creativecommons.org/licenses/by-nc-nd/3.0/" title="Creative Commons Attribution-Noncommercial-No Derivative Works 3.0 Unported" rel="license">Copyright &copy;</a> 2007&ndash;2013 <a href="http://bash.am" class="url fn">Chris Basham</a><span class="title hide"><abbr title="User Experience">UX</abbr> designer and web developer</span></li>
+				<li><a href="/colophon">Colophon</a></li>
+			</ul>
+		</aside>
+		<div class="clear"></div>
+	</section>
+</footer>
+
+<script type="text/javascript">
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<script type="text/javascript">
+try {
+var pageTracker = _gat._getTracker("UA-837636-4");
+pageTracker._setDomainName(".bash.am");
+pageTracker._trackPageview();
+} catch(err) {}
+</script>
+
+</body>
+
+</html>

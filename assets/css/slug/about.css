@@ -1,0 +1,12 @@
+	
+body {
+	background: transparent url(/assets/i/about-bg01.jpg) no-repeat 50% -20px; }
+
+body.b {
+	background-image: url(/assets/i/about-bg02.jpg); }
+
+body.c {
+	background-image: url(/assets/i/about-bg03.jpg); }
+	
+article {
+	border-color: transparent; }
